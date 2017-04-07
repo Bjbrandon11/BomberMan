@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+<<<<<<< HEAD
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -8,11 +9,15 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+=======
+using System.Text;
+>>>>>>> refs/remotes/origin/master
 
 namespace BomberMan
 {
     class Player
     {
+<<<<<<< HEAD
         public PlayerIndex PlayerNum;//This is which gamePad the player is using
         GamePadState oldGPState;//This is the state of the gamePad for the previous frame.
         Vector2 position;
@@ -24,5 +29,7 @@ namespace BomberMan
             this.position = position;
         }
 
+=======
+>>>>>>> refs/remotes/origin/master
     }
 }
