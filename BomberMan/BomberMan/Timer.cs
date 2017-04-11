@@ -8,10 +8,11 @@ namespace BomberMan
 {
     class Timer
     {
-        int count;//this is the number of frames that have gone by since it started
-        int frequency;//this is how often the action occurs
-        bool isRunning;
-        const float FRAMES_PER_SECOND = 60.0f;
+        
+        public int count;//this is the number of frames that have gone by since it started
+        public int frequency;//this is how often the action occurs
+        public bool isRunning;
+        public const float FRAMES_PER_SECOND = 60.0f;
         public Timer(int frames)
         {
             frequency = frames;
