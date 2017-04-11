@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,16 @@ namespace BomberMan
             foreach (String name in textNames)
                 TextureList.Add(Content.Load<Texture2D>(name));
         }
-
+        public readonly Rectangle sourceRec;
+        public readonly Texture texture;
         public Tile(int x,int y,int width,int height,Texture2D text)
         {
-            T
+            sourceRec = new Rectangle(x, y, width, height);
+            texture = text;
+        }
+        public void Draw(Color color)
+        {
+            GameHolder.spritebatch.Draw(texture,)
         }
     }
 }
