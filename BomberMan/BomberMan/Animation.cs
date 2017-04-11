@@ -5,7 +5,8 @@ using System.Text;
 
 namespace BomberMan
 {
-    class Player
+    class Animation
     {
+        
     }
 }
