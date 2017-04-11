@@ -1,0 +1,28 @@
+﻿Revert "Merge remote-tracking branch 'refs/remotes/origin/Entity'"
+
+This reverts commit a33d118bcad2ef3e25f6871b1d750df97342bf45, reversing
+changes made to de848ef05ef75afbbfa9ecb25d45b93b76f39c16.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 5 and 14 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# Changes to be committed:
+#	deleted:    BomberMan/BomberMan/Animation.cs
+#	modified:   BomberMan/BomberMan/BomberMan.csproj
+#	deleted:    BomberMan/BomberMan/BomberMan.csproj.user
+#	deleted:    BomberMan/BomberMan/Entity.cs
+#	modified:   BomberMan/BomberMan/Game1.cs
+#	deleted:    BomberMan/BomberMan/GameHolder.cs
+#	deleted:    BomberMan/BomberMan/Tile.cs
+#	deleted:    BomberMan/BomberMan/obj/x86/Debug/BomberMan.csproj.FileListAbsolute.txt
+#	deleted:    BomberMan/BomberMan/obj/x86/Debug/ContentPipeline-{582AD15C-C043-4D10-8807-F556573FEE4A}.xml
+#	deleted:    BomberMan/BomberMan/obj/x86/Debug/Microsoft.Xna.Framework.RuntimeProfile.txt
+#	modified:   BomberMan/BomberManContent/BomberManContent.contentproj
+#	deleted:    BomberMan/BomberManContent/obj/x86/Debug/BomberManContent.contentproj.FileListAbsolute.txt
+#	deleted:    BomberMan/BomberManContent/obj/x86/Debug/BomberManContent.contentprojResolveAssemblyReference.cache
+#
+
