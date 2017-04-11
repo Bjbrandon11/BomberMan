@@ -1,0 +1,18 @@
+﻿Revert "Merge remote-tracking branch 'refs/remotes/origin/master' into Entity"
+
+This reverts commit 1c1f252eb10470b565af31e8335c09cca240ad11, reversing
+changes made to c1fbe84bec18155a8c04bd05cc22294efb35660f.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch Entity
+# Your branch is ahead of 'origin/Entity' by 20 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	deleted:    BomberMan/BomberMan/BombTimer.cs
+#	modified:   BomberMan/BomberMan/BomberMan.csproj
+#	modified:   BomberMan/BomberMan/Player.cs
+#	deleted:    BomberMan/BomberMan/Timer.cs
+#
+
