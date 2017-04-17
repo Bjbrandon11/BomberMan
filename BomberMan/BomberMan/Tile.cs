@@ -11,14 +11,15 @@ namespace BomberMan
 {
     class Tile
     {
-        public static List<Texture2D> TextureList;
+        public static Dictionary<String,Texture2D> TextureList;
         public static void LoadContent()
         {
-            TextureList = new List<Texture2D>();
+            TextureList = new Dictionary<String, Texture2D>();
             ContentManager Content =GameHolder.game.Content;
-            String[] textNames = Directory.GetFiles(Content.RootDirectory+"/Textures");
+            /*string[] textNames = Directory.GetFiles(@Content.RootDirectory+"/Textures/Tiles");
             foreach (String name in textNames)
-                TextureList.Add(Content.Load<Texture2D>(name));
+                TextureList.Add(name,Content.Load<Texture2D>(name));*/
+            TextureList.Add("Tiles/Block_Invin", Content.Load<Texture2D>(@"Textures/Tiles/Block_Invin"));
         }
         public readonly Rectangle sourceRec;
         public readonly Texture2D texture;

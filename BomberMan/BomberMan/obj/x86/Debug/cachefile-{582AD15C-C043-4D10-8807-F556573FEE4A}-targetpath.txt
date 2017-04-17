@@ -1,0 +1,3 @@
+Content\Textures\Sprites\Man\BomberMan.xnb
+Content\Textures\Sprites\Bombs\Explosion-sheet.xnb
+Content\Textures\Tiles\Block_Invin.xnb
