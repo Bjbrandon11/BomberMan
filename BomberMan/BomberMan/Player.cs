@@ -17,7 +17,7 @@ namespace BomberMan
         bool bombPlaced;
         const float MAX_SPEED = 35.0f;
 
-        public Player(PlayerIndex number)
+        public Player(PlayerIndex number, Point location) : base(location)
         {
             bombPlaced = false;
             playerNum = number;
