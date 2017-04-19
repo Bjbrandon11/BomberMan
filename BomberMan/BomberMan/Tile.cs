@@ -21,15 +21,13 @@ namespace BomberMan
                 TextureList.Add(Content.Load<Texture2D>(name));
         }
         public readonly Rectangle sourceRec;
-        public readonly Texture texture;
+        public readonly Texture2D texture;
         public Tile(int x,int y,int width,int height,Texture2D text)
         {
             sourceRec = new Rectangle(x, y, width, height);
             texture = text;
         }
-        public void Draw(Color color)
-        {
-            GameHolder.spritebatch.Draw(texture,)
-        }
+        public void Draw(Rectangle rect){this.Draw(rect,Color.White);}
+        public void Draw(Rectangle rect,Color color){GameHolder.spritebatch.Draw(texture, rect,sourceRec, color);}
     }
 }

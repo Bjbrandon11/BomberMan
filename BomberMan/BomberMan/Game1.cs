@@ -18,7 +18,7 @@ namespace BomberMan
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        List<Entity> EntityList;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -34,7 +34,7 @@ namespace BomberMan
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            EntityList = new List<Entity>();
             base.Initialize();
         }
 
