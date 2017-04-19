@@ -28,7 +28,7 @@ namespace BomberMan
         {
             count = 0;
         }
-        public bool Update()
+        public virtual bool Update()
         {
             bool result = false;
             if (isRunning)

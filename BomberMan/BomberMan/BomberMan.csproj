@@ -76,6 +76,7 @@
     <Compile Include="Block.cs" />
     <Compile Include="Bomb.cs" />
     <Compile Include="Entity.cs" />
+    <Compile Include="ExplosionTimer.cs" />
     <Compile Include="GameHolder.cs" />
     <Compile Include="Maze.cs" />
     <Compile Include="Player.cs" />

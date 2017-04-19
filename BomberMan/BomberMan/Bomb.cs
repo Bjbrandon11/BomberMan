@@ -9,5 +9,6 @@ namespace BomberMan
 {
     class Bomb
     {
+        
     }
 }
