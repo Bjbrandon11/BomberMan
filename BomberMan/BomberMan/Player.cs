@@ -13,7 +13,7 @@ namespace BomberMan
         {
             int bottom = this.location.Bottom;
             int center = this.location.Center.X;
-            this.gameBoard.receiveBomb(new Bomb(), bottom, center);
+            //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
         }
     }
 }

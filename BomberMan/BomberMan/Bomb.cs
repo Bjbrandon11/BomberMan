@@ -7,16 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace BomberMan
 {
-    class Bomb: Entity
+    class Bomb
     {
-        int radius;
-        Vector2 location;
-        Timer animTimer;
-
-        public override void Update()
-        {
-            //TODO- write update logic
-            animTimer.Update();
-        }
     }
 }
