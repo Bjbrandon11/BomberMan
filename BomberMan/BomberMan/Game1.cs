@@ -19,6 +19,7 @@ namespace BomberMan
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         List<Entity> EntityList;
+        Block temp;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -35,6 +36,8 @@ namespace BomberMan
         {
             // TODO: Add your initialization logic here
             EntityList = new List<Entity>();
+            
+            
             base.Initialize();
         }
 
@@ -48,6 +51,8 @@ namespace BomberMan
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
+            Tile.LoadContent();
+            temp = new Block(0, 0);
             // TODO: use this.Content to load your game content here
         }
 
@@ -85,7 +90,9 @@ namespace BomberMan
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            spriteBatch.Begin();
+            temp.Draw();
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }
