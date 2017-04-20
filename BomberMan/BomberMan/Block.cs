@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 ﻿using Microsoft.Xna.Framework;
 using System;
-=======
-﻿using System;
->>>>>>> refs/remotes/origin/master
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +8,6 @@ namespace BomberMan
 {
     class Block
     {
-<<<<<<< HEAD
         public const int SIZE= 108;
         public readonly bool breakable;
         public bool broken;
@@ -32,11 +27,5 @@ namespace BomberMan
             text.Draw(hitBox);
         }
 
-=======
-        public void placeBomb(Bomb receive)
-        {
-            this.item = receive;
-        }
->>>>>>> refs/remotes/origin/master
     }
 }

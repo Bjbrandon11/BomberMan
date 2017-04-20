@@ -74,20 +74,12 @@
   <ItemGroup>
     <Compile Include="Animation.cs" />
     <Compile Include="Block.cs" />
-<<<<<<< HEAD
-=======
-    <Compile Include="Bomb.cs" />
->>>>>>> refs/remotes/origin/master
     <Compile Include="Entity.cs" />
-    <Compile Include="ExplosionTimer.cs" />
     <Compile Include="GameHolder.cs" />
-    <Compile Include="Maze.cs" />
-    <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Tile.cs" />
-    <Compile Include="Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
