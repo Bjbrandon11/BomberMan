@@ -1,13 +1,14 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
 
 namespace BomberMan
 {
-    class Player:Entity
+    class Player : Entity
     {
         Rectangle location;//where the player is on the screen
         //readonly is a keyword that allows the variable to be assigned once then not changed
@@ -46,5 +47,10 @@ namespace BomberMan
             oldGPS = gps;
             oldKb = kb;
         }
+        public void Draw(SpriteBatch spritebatch)
+        {
+
+        }
+
     }
 }

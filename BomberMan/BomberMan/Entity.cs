@@ -13,18 +13,17 @@ namespace BomberMan
         private int Height;
         private int Width;
         private Rectangle hitBox;
-        //Animation
+        private Dictionary<String,Animation> animations;
         public Entity(Point p)
         {
             
         }
         public Entity(Vector2 v):this(new Point((int)v.X,(int)v.Y)){}
+        public Entity(int x, int y) : this(new Point(x, y)) { }
+        public void setAnimations(Dictionary<String, Animation> anims){animations = anims;}
 
         public bool Intersects(Rectangle rect) { return hitBox.Intersects(hitBox); }
         public abstract void Update();
-        public void Draw(SpriteBatch spritebatch)
-        {
-            //draw Animation
-        }
+        public abstract void Draw(SpriteBatch spritebatch);
     }
 }
