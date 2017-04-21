@@ -20,9 +20,11 @@ namespace BomberMan
         SpriteBatch spriteBatch;
         List<Entity> EntityList;
         Block temp;
+        Animation test;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferMultiSampling = true;
             Content.RootDirectory = "Content";
         }
 
@@ -52,6 +54,8 @@ namespace BomberMan
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
             Tile.LoadContent();
+            Animation.LoadContent();
+            test = Animation.Bomb;
             temp = new Block(0, 0);
             // TODO: use this.Content to load your game content here
         }
@@ -75,7 +79,7 @@ namespace BomberMan
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+            test.Update();
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -90,8 +94,9 @@ namespace BomberMan
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
             temp.Draw();
+            test.Draw(new Rectangle(100, 100, 160, 160), Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
         }
