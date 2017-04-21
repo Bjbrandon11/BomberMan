@@ -6,14 +6,20 @@ using System.Text;
 
 namespace BomberMan
 {
+    
     class Animation
     {
+        public static Animation Bomb; 
+        public static void LoadContent()
+        {
+            Bomb = new Animation(((Tile[])Tile.bombAnimation.Clone()), 3);
+        }
         private Tile[] tiles;
         private int fpt;
         private int currentFrames;
-        public Animation(Tile[] tiles,int FramesPerTile)
+        public Animation(Tile[] tileList,int FramesPerTile)
         {
-            this.tiles = tiles;
+            this.tiles = tileList;
             fpt=FramesPerTile;
             currentFrames = 0;
         }
