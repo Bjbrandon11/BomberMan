@@ -22,7 +22,7 @@ namespace BomberMan
         public Entity(int x, int y) : this(new Point(x, y)) { }
         public void setAnimations(Dictionary<String, Animation> anims){animations = anims;}
 
-        public bool Intersects(Rectangle rect) { return hitBox.Intersects(hitBox); }
+        public bool Intersects(Rectangle rect) { return hitBox.Intersects(rect); }
         public abstract void Update();
         public abstract void Draw(SpriteBatch spritebatch);
     }
