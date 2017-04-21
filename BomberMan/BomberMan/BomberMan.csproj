@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation.cs" />
+    <Compile Include="Block.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="GameHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
