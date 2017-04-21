@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BomberMan
 {
-    class Bomb : Entity
+    class Bomb
     {
     }
 }
