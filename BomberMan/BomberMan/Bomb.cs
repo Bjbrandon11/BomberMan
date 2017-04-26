@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace BomberMan
 {
-    class Bomb
+    class Bomb:Entity
     {
         /// <summary>
         /// instanceVariables
