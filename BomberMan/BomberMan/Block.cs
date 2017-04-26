@@ -31,7 +31,11 @@ namespace BomberMan
             //broken = false;
             this.currentState = state;
         }
-       
+        public void placeBomb(Bomb receive)
+        {
+            this.item = receive;
+        }
+        
         public bool Intersects(Rectangle rec) { return rec.Intersects(hitBox); }
         public void Draw()
         {
