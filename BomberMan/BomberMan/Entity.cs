@@ -14,15 +14,16 @@ namespace BomberMan
         private int Width;
         private Rectangle hitBox;
         private Dictionary<String,Animation> animations;
+        protected Point MazeIndex;
         public Entity(Point p)
         {
-            
+            MazeIndex = p;
         }
-        public Entity(Vector2 v):this(new Point((int)v.X,(int)v.Y)){}
+        public Entity(Vector2 v) : this(new Point((int)v.X, (int)v.Y)) { }
         public Entity(int x, int y) : this(new Point(x, y)) { }
         public void setAnimations(Dictionary<String, Animation> anims){animations = anims;}
 
-        public bool Intersects(Rectangle rect) { return hitBox.Intersects(hitBox); }
+        public bool Intersects(Rectangle rect) { return hitBox.Intersects(rect); }
         public abstract void Update();
         public abstract void Draw(SpriteBatch spritebatch);
     }
