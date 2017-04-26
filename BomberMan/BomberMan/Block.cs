@@ -35,6 +35,7 @@ namespace BomberMan
         {
             this.item = receive;
         }
+        
         public bool Intersects(Rectangle rec) { return rec.Intersects(hitBox); }
         public void Draw()
         {

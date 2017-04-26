@@ -33,3 +33,23 @@ C:\Users\BRosa\Desktop\c# Projects\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\
 C:\Users\BRosa\Desktop\c# Projects\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\BRosa\Desktop\c# Projects\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.exe
 C:\Users\BRosa\Desktop\c# Projects\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.pdb
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.csprojResolveAssemblyReference.cache
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.exe
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.pdb
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Level\Level01.txt
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\BomberMan.exe
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\BomberMan.pdb
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
