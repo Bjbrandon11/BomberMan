@@ -91,6 +91,7 @@ namespace BomberMan
                 }
             }
         }
+
         private Tile LoadTile(char _tileType, int _x, int _y)
         {
             switch (_tileType)
