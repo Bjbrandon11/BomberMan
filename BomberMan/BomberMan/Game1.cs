@@ -57,10 +57,11 @@ namespace BomberMan
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            LoadLevel();
+            
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
             Tile.LoadContent();
+            LoadLevel();
             temp = new Block(0, 0);
             // TODO: use this.Content to load your game content here
         }
