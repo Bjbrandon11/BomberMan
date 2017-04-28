@@ -19,8 +19,6 @@ namespace BomberMan
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         List<Entity> EntityList;
-        Block temp;
-        Animation test;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -55,8 +53,6 @@ namespace BomberMan
             GameHolder.game = this;
             Tile.LoadContent();
             Animation.LoadContent();
-            test = Animation.Bomb.Clone(3);
-            temp = new Block(0, 0);
             // TODO: use this.Content to load your game content here
         }
 
