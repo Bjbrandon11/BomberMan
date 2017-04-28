@@ -21,7 +21,7 @@ namespace BomberMan
         //public bool broken;
         Tile text;
         Rectangle hitBox;
-        BlockState currentState;
+        public BlockState currentState;
         public Block(int x,int y):this(x,y, new Tile(0, 0, 32, 32, Tile.TextureList["Tiles/Block_Invin"]),BlockState.Passable){}
         public Block(int x, int y,Tile text,BlockState state)
         {
