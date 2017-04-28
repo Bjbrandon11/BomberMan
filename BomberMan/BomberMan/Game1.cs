@@ -19,8 +19,6 @@ namespace BomberMan
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         List<Entity> EntityList;
-        Block temp;
-
         private Layout level;
         private const int TargetFrameRate = 60;
         private const int BackBufferWidth = 1280;
@@ -30,6 +28,7 @@ namespace BomberMan
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = BackBufferWidth;
             graphics.PreferredBackBufferHeight = BackBuffeHeight;
+            graphics.PreferMultiSampling = true;
             Content.RootDirectory = "Content";
             TargetElapsedTime = TimeSpan.FromTicks(TimeSpan.TicksPerSecond / TargetFrameRate);
         }
@@ -57,19 +56,17 @@ namespace BomberMan
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
             Tile.LoadContent();
             LoadLevel();
-            temp = new Block(0, 0);
+            Animation.LoadContent();
             // TODO: use this.Content to load your game content here
         }
         private void LoadLevel()
         {
             level = new Layout(Services, @"Content/Level/Level01.txt");
         }
-
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
         /// all content.
@@ -89,7 +86,6 @@ namespace BomberMan
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -104,9 +100,8 @@ namespace BomberMan
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
             level.Draw(gameTime, spriteBatch);
-            //temp.Draw();
             spriteBatch.End();
             base.Draw(gameTime);
         }

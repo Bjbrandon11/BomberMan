@@ -12,9 +12,12 @@ namespace BomberMan
         
         private int Height;
         private int Width;
-        private Rectangle hitBox;
         private Dictionary<String,Animation> animations;
+
+        public Rectangle hitBox;
+
         protected Point MazeIndex;
+
         public Entity(Point p)
         {
             MazeIndex = p;
