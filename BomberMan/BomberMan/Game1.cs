@@ -20,10 +20,18 @@ namespace BomberMan
         SpriteBatch spriteBatch;
         List<Entity> EntityList;
         Block temp;
+
+        private Layout level;
+        private const int TargetFrameRate = 60;
+        private const int BackBufferWidth = 1280;
+        private const int BackBuffeHeight = 720;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferWidth = BackBufferWidth;
+            graphics.PreferredBackBufferHeight = BackBuffeHeight;
             Content.RootDirectory = "Content";
+            TargetElapsedTime = TimeSpan.FromTicks(TimeSpan.TicksPerSecond / TargetFrameRate);
         }
 
         /// <summary>
@@ -49,11 +57,17 @@ namespace BomberMan
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
             Tile.LoadContent();
+            LoadLevel();
             temp = new Block(0, 0);
             // TODO: use this.Content to load your game content here
+        }
+        private void LoadLevel()
+        {
+            level = new Layout(Services, @"Content/Level/Level01.txt");
         }
 
         /// <summary>
@@ -91,7 +105,8 @@ namespace BomberMan
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            temp.Draw();
+            level.Draw(gameTime, spriteBatch);
+            //temp.Draw();
             spriteBatch.End();
             base.Draw(gameTime);
         }
