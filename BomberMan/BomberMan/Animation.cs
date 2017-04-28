@@ -29,6 +29,8 @@ namespace BomberMan
             if (currentFrames+1 >= fpt * tiles.Length)
                 currentFrames = 0;
         }
+        public Animation Clone() { return new Animation((Tile[])tiles.Clone(), fpt); }
+        public Animation Clone(int frames) { return new Animation((Tile[])tiles.Clone(), frames); }
         public void Draw(Rectangle rect,Color color)
         {
             tiles[currentFrames / fpt].Draw(rect, color);

@@ -12,8 +12,8 @@ namespace BomberMan
         
         private int Height;
         private int Width;
-        private Rectangle hitBox;
         private Dictionary<String,Animation> animations;
+        public Rectangle hitBox;
         public Entity(Point p)
         {
             

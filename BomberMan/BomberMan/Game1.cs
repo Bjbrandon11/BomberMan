@@ -55,7 +55,7 @@ namespace BomberMan
             GameHolder.game = this;
             Tile.LoadContent();
             Animation.LoadContent();
-            test = Animation.Bomb;
+            test = Animation.Bomb.Clone(3);
             temp = new Block(0, 0);
             // TODO: use this.Content to load your game content here
         }
