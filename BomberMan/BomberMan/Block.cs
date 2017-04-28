@@ -8,18 +8,30 @@ namespace BomberMan
 {
     class Block
     {
+        public enum BlockState
+        {
+            Passable = 0,
+            Impassable,
+            Breakable,
+            Explosion,
+        }
         Entity item;
         public const int SIZE = 108;
         //public readonly bool breakable;
         //public bool broken;
-
+<<<<<<< HEAD
+        Tile text;
+        Rectangle hitBox;
+        public BlockState currentState;
+        public Block(int x,int y):this(x,y, new Tile(0, 0, 32, 32, Tile.TextureList["Tiles/Block_Invin"]),BlockState.Passable){}
+        public Block(int x, int y,Tile text,BlockState state)
+=======
         public Tile text;
         public Rectangle hitBox;
         public BlockState currentState;
-
         public Block(int x, int y) : this(x, y, new Tile(0, 0, 32, 32, Tile.TextureList["Tiles/Block_Invin"]), BlockState.Passable) { }
         public Block(int x, int y, Tile text, BlockState state)
-
+>>>>>>> origin/master
         {
             this.text = text;
             hitBox = new Rectangle(x, y, SIZE, SIZE);
