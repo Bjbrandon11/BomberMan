@@ -19,11 +19,18 @@ namespace BomberMan
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         List<Entity> EntityList;
+        private Layout level;
+        private const int TargetFrameRate = 60;
+        private const int BackBufferWidth = 1280;
+        private const int BackBuffeHeight = 720;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferWidth = BackBufferWidth;
+            graphics.PreferredBackBufferHeight = BackBuffeHeight;
             graphics.PreferMultiSampling = true;
             Content.RootDirectory = "Content";
+            TargetElapsedTime = TimeSpan.FromTicks(TimeSpan.TicksPerSecond / TargetFrameRate);
         }
 
         /// <summary>
@@ -52,10 +59,14 @@ namespace BomberMan
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
             Tile.LoadContent();
+            LoadLevel();
             Animation.LoadContent();
             // TODO: use this.Content to load your game content here
         }
-
+        private void LoadLevel()
+        {
+            level = new Layout(Services, @"Content/Level/Level01.txt");
+        }
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
         /// all content.
@@ -75,7 +86,6 @@ namespace BomberMan
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-            test.Update();
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -91,7 +101,7 @@ namespace BomberMan
 
             // TODO: Add your drawing code here
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
-            
+            level.Draw(gameTime, spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }

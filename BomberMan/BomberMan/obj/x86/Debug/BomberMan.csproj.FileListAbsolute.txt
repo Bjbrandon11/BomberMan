@@ -76,3 +76,4 @@ C:\Users\217665\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Bom
 C:\Users\217665\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\217665\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.exe
 C:\Users\217665\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.pdb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Level\Level01.txt
