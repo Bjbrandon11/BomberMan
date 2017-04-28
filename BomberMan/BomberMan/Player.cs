@@ -47,7 +47,12 @@ namespace BomberMan
             oldGPS = gps;
             oldKb = kb;
         }
-        public void Draw(SpriteBatch spritebatch)
+        public bool CheckIfDead()
+        {
+            bool result = false;
+            return result;
+        }
+        public override void Draw(SpriteBatch spritebatch)
         {
 
         }
