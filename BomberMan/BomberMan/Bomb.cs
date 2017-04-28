@@ -31,47 +31,47 @@ namespace BomberMan
             //bool isBlocked = true;
             for (int i = 1; i <= HorizontalRange; i++)
             {
-                if (Maze[MazeIndex.X + i, MazeIndex.Y].currentState == Block.BlockState.Breakable)
+                if (Maze[MazeIndex.X + i, MazeIndex.Y].currentState == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = Block.BlockState.Explosion;
+                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
                     break;
                 }
                 else
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = Block.BlockState.Explosion;
+                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
             }
             for (int i = -1; i >= -HorizontalRange; i--)
             {
-                if (Maze[MazeIndex.X + i, MazeIndex.Y].currentState == Block.BlockState.Breakable)
+                if (Maze[MazeIndex.X + i, MazeIndex.Y].currentState == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = Block.BlockState.Explosion;
+                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
                     break;
                 }
                 else
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = Block.BlockState.Explosion;
+                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
             }
             for (int i = 1; i <= VerticalRange; i++)
             {
-                if (Maze[MazeIndex.X, MazeIndex.Y + i].currentState == Block.BlockState.Breakable)
+                if (Maze[MazeIndex.X, MazeIndex.Y + i].currentState == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = Block.BlockState.Explosion;
+                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
                     break;
                 }
                 else
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = Block.BlockState.Explosion;
+                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
             }
             for (int i = -1; i >= -VerticalRange; i--)
             {
-                if (Maze[MazeIndex.X, MazeIndex.Y + i].currentState == Block.BlockState.Breakable)
+                if (Maze[MazeIndex.X, MazeIndex.Y + i].currentState == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = Block.BlockState.Explosion;
+                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
                     break;
                 }
                 else
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = Block.BlockState.Explosion;
+                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
             }
 
         }
