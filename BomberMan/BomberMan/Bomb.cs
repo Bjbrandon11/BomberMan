@@ -89,6 +89,7 @@ namespace BomberMan
                 }
                 else
                     Maze[MazeIndex.X, MazeIndex.Y + i].currentState = Block.BlockState.Explosion;
+            }
 
         }
 

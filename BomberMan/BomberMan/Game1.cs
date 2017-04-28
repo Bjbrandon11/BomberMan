@@ -91,8 +91,7 @@ namespace BomberMan
 
             // TODO: Add your drawing code here
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
-            temp.Draw();
-            test.Draw(new Rectangle(100, 100, 160, 160), Color.White);
+            
             spriteBatch.End();
             base.Draw(gameTime);
         }
