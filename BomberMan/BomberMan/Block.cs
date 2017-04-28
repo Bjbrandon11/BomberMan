@@ -27,6 +27,7 @@ namespace BomberMan
             //broken = false;
             this.currentState = state;
         }
+
         public void placeBomb(Bomb receive)
         {
             this.item = receive;

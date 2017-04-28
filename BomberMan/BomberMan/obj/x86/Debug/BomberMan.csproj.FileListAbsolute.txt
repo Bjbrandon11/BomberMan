@@ -33,6 +33,9 @@ C:\Users\BRosa\Desktop\c# Projects\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\
 C:\Users\BRosa\Desktop\c# Projects\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\BRosa\Desktop\c# Projects\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.exe
 C:\Users\BRosa\Desktop\c# Projects\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.pdb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb
 C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.csprojResolveAssemblyReference.cache
 C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.exe
@@ -93,3 +96,4 @@ C:\Users\217665\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Bom
 \\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
 \\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
 \\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Level\Level01.txt
