@@ -12,6 +12,7 @@ namespace BomberMan
         /// <summary>
         /// instanceVariables
         /// </summary>
+        ExplosionTimer explode;
         readonly int HorizontalRange;
         readonly int VerticalRange;
 
@@ -25,12 +26,16 @@ namespace BomberMan
         {
             HorizontalRange = x;
             VerticalRange = y;
-            base.hitBox = new Rectangle(p.X-SIZE/2,p.Y-SIZE/2,SIZE,SIZE);
+            base.hitBox = new Rectangle(p.X - SIZE / 2, p.Y - SIZE / 2, SIZE, SIZE);
             anim = Animation.Bomb.Clone(4);
         }
         public override void Update()
         {
             anim.Update();
+            if (explode.Update())
+            {
+                Explosion();
+            }
             
         }
         public override void Draw(SpriteBatch spritebatch)
@@ -38,7 +43,7 @@ namespace BomberMan
             anim.Draw(base.hitBox, Color.White);
         }
 
-        public void Explode()
+        public void Explosion()
         {
             ///<remarks>
             ///Based on what the level is called change the name as needed.
