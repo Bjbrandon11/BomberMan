@@ -75,7 +75,7 @@
     <Compile Include="Animation.cs" />
     <Compile Include="Block.cs" />
     <Compile Include="Bomb.cs" />
-    <Compile Include="BombState.cs" />
+    <Compile Include="BlockState.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="ExplosionTimer.cs" />
     <Compile Include="GameHolder.cs" />

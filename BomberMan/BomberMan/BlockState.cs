@@ -11,5 +11,6 @@ namespace BomberMan
         Impassable,
         Breakable,
         Explosion,
+        Spawn
     }
 }

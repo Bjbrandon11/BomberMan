@@ -11,12 +11,11 @@ namespace BomberMan
 {
     class Layout : IDisposable
     {
-        private const double scale = 1.5;
         private Block[,] tiles;
-        private Tile[,] tiles;
         private Block[,] locations;
         private Dictionary<string, Texture2D> tileSheets;
         public Dictionary<int, Rectangle> TileSourceRecs;
+        Block[] spawns = new Block[4];
         public ContentManager Content
         {
             get { return content; }
@@ -93,19 +92,31 @@ namespace BomberMan
                 }
             }
         }
-
-        private Tile LoadTile(char _tileType, int _x, int _y)
+        public Block[] getSpawnBlocks() { return spawns; }
+        private Block LoadTile(char _tileType, int _x, int _y)
         {
+            double scale = Game1.scaleFrom32;
             switch (_tileType)
             {
                 case '.':
                     return null;
 
                 case 'B':
-                    return new Tile(0, 0, 32, 32, Tile.TextureList["Tiles/Block_Invin"]);
+                    return new Block((int)(_x*32*scale), (int)(_y * 32 * scale),BlockState.Impassable);
                 case 'N':
-                    return new Tile(0, 0, 32, 32, Tile.TextureList["Tiles/Block_Invin"]);
-
+                    return new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Impassable);
+                case '1':
+                    spawns[0]= new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    return spawns[0];
+                case '2':
+                    spawns[1] = new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    return spawns[1];
+                case '3':
+                    spawns[2] = new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    return spawns[2];
+                case '4':
+                    spawns[3] = new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    return spawns[3];
                 default:
                     throw new NotSupportedException(String.Format("Unsupported tile type character '{0}' at position {1}, {2}.", _tileType, _x, _y));
 
@@ -126,14 +137,15 @@ namespace BomberMan
 
         private void DrawTiles(SpriteBatch spriteBatch)
         {
+            
             for (int y = 0; y < Height; ++y)
             {
                 for (int x = 0; x < Width; ++x)
                 {
                     if (tiles[x, y] != null)
                     {
-                        Rectangle position = new Rectangle((int)(scale*x * TileWidth),(int)(scale*y * TileHeight), (int)(scale *TileWidth), (int)(scale *TileHeight));
-                        tiles[x, y].Draw(position);
+                        
+                        tiles[x, y].Draw();
                     }
                     
                 }

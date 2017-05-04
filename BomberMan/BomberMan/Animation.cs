@@ -7,7 +7,7 @@ using System.Text;
 namespace BomberMan
 {
     
-    class Animation
+    public class Animation
     {
         public static Animation Bomb; 
         public static void LoadContent()
