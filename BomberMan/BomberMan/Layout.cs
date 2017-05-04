@@ -13,6 +13,8 @@ namespace BomberMan
     {
         private const double scale = 1.5;
         private Block[,] tiles;
+        private Tile[,] tiles;
+        private Block[,] locations;
         private Dictionary<string, Texture2D> tileSheets;
         public Dictionary<int, Rectangle> TileSourceRecs;
         public ContentManager Content
@@ -28,7 +30,7 @@ namespace BomberMan
         private const int TilesPerRow = 5;
         private const int NumRowsPerSheet = 5;
 
-        private Random random = new Random(1337);
+        private Random random = new Random();
 
         public int Width
         {

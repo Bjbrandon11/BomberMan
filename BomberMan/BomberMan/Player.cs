@@ -1,15 +1,17 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace BomberMan
 {
     class Player : Entity
     {
+        public int lives;
+        const int INITIAL_LIVES = 5;
         Rectangle location;//where the player is on the screen
         //readonly is a keyword that allows the variable to be assigned once then not changed
         readonly PlayerIndex playerNum;//the number of which controller the player has
@@ -24,6 +26,7 @@ namespace BomberMan
             playerNum = number;
             oldGPS = GamePad.GetState(playerNum);
             oldKb = Keyboard.GetState();
+            lives = INITIAL_LIVES;
         }
 
 
@@ -47,7 +50,21 @@ namespace BomberMan
             oldGPS = gps;
             oldKb = kb;
         }
-        public void Draw(SpriteBatch spritebatch)
+        public bool CheckIfAllDead(Rectangle explodeRect)
+        {
+            return lives == 0;
+        }
+        public bool CheckIfDying(Rectangle explodeRect)
+        {
+            bool result = false;
+            if (hitBox.Intersects(explodeRect))
+            {
+                lives--;
+                result = true;
+            }
+            return result;
+        }
+        public override void Draw(SpriteBatch spritebatch)
         {
 
         }
