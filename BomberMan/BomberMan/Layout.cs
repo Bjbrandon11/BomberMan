@@ -12,7 +12,7 @@ namespace BomberMan
     class Layout : IDisposable
     {
         private const double scale = 1.5;
-        private Tile[,] tiles;
+        private Block[,] tiles;
         private Dictionary<string, Texture2D> tileSheets;
         public Dictionary<int, Rectangle> TileSourceRecs;
         public ContentManager Content
@@ -79,7 +79,7 @@ namespace BomberMan
                 Console.WriteLine("The file could not be read: ");
                 Console.WriteLine(e.Message);
             }
-            tiles = new Tile[numOfTilesAcross, lines.Count];
+            tiles = new Block[numOfTilesAcross, lines.Count];
 
             for (int y = 0; y < Height; y++)
             {
