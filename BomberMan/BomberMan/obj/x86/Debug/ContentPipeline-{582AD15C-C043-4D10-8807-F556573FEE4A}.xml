@@ -7,6 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb</Output>
+      <Time>2017-04-21T09:10:00.6345992-05:00</Time>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb</Output>
       <Time>2017-04-21T08:43:10.5306426-05:00</Time>
     </Item>
@@ -16,6 +18,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb</Output>
+      <Time>2017-04-21T09:10:00.6325988-05:00</Time>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb</Output>
       <Time>2017-04-21T08:43:09.1966426-05:00</Time>
     </Item>
@@ -25,6 +29,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb</Output>
+      <Time>2017-04-21T09:10:00.6365996-05:00</Time>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb</Output>
       <Time>2017-04-21T08:43:11.8446426-05:00</Time>
     </Item>
@@ -35,6 +41,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberManContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\</OutputDirectory>
       <RootDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberManContent\</RootDirectory>
       <LoggerRootDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\</LoggerRootDirectory>
       <IntermediateDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\</IntermediateDirectory>
@@ -67,6 +77,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-11-04T08:35:31.1332035-05:00</Value>
         <Value>2016-11-04T08:32:43.3875549-05:00</Value>
       </Assembly>
     </Assemblies>
