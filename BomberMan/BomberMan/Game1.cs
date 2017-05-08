@@ -56,6 +56,7 @@ namespace BomberMan
         private void LoadLevel()
         {
             level = new Layout(Services, @"Content/Level/Level01.txt");
+            GameHolder.level = level;
         }
 
         public List<Bomb> getEntityList() { return EntityList; }
@@ -68,6 +69,11 @@ namespace BomberMan
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            // TODO: Add your update logic here
+            foreach (Player p in players)
+                p.Update();
+            foreach (Entity e in EntityList)
+                e.Update();
             base.Update(gameTime);
         }
 

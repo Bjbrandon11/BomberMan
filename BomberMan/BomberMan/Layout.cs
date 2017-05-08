@@ -55,6 +55,16 @@ namespace BomberMan
             }
             LoadTiles(path);
         }
+        public bool Intersects(Rectangle rect)
+        {
+            foreach(Block b in tiles)
+            {
+                if (b!=null && (b.currentState == BlockState.Breakable || b.currentState == BlockState.Impassable))
+                    if (b.hitBox.Intersects(rect))
+                        return true;
+            }
+            return false;
+        }
         private void LoadTiles(string path)
         {
             int numOfTilesAcross = 0;

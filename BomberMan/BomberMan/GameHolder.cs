@@ -11,5 +11,6 @@ namespace BomberMan
     {
         public static Game game { get; set; }
         public static SpriteBatch spritebatch { get; set; }
+        public static Layout level { get; set; }
     }
 }
