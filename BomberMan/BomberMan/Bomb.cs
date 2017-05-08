@@ -14,6 +14,7 @@ namespace BomberMan
         /// </summary>
         Timer explode;
         readonly int Range;
+        //public bool isExplosionFinished;
 
         const int SIZE = 48;
         Animation anim;
@@ -24,6 +25,7 @@ namespace BomberMan
         public Bomb(Point p, Timer time, int range) : base(p)
         {
             Range = range;
+            //isExplosionFinished = false;
             explode = time;
             base.hitBox = new Rectangle(p.X - SIZE / 2, p.Y - SIZE / 2, SIZE, SIZE);
             anim = Animation.Bomb.Clone(4);
@@ -34,6 +36,10 @@ namespace BomberMan
             if (explode.Update())
             {
                 Explosion();
+            }
+            if (anim.completed > 0)
+            {
+                Game1.EntityList.Remove(this);
             }
             
         }
@@ -94,6 +100,7 @@ namespace BomberMan
                 else
                     Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
             }
+
 
         }
 
