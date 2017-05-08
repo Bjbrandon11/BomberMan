@@ -94,9 +94,9 @@ namespace BomberMan
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || kb.IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            foreach (Entity thing in EntityList)
+            for (int i = EntityList.Count - 1; i >= 0; i--)
             {
-                thing.Update();
+                EntityList[i].Update();
             }
             // TODO: Add your update logic here
             foreach (Player p in players)

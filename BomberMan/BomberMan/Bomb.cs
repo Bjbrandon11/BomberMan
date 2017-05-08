@@ -37,7 +37,7 @@ namespace BomberMan
             {
                 Explosion();
             }
-            if (anim.currentFrames>=(anim.tiles.Count<Tile>()*anim.fpt))
+            if (anim.completed > 0)
             {
                 Game1.EntityList.Remove(this);
             }
