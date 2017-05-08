@@ -11,9 +11,11 @@ namespace BomberMan
 {
     class Layout : IDisposable
     {
-        private Tile1[,] tiles;
+        private Block[,] tiles;
+        private Block[,] locations;
         private Dictionary<string, Texture2D> tileSheets;
         public Dictionary<int, Rectangle> TileSourceRecs;
+        Block[] spawns = new Block[4];
         public ContentManager Content
         {
             get { return content; }
@@ -27,7 +29,7 @@ namespace BomberMan
         private const int TilesPerRow = 5;
         private const int NumRowsPerSheet = 5;
 
-        private Random random = new Random(1337);
+        private Random random = new Random();
 
         public int Width
         {
@@ -78,7 +80,7 @@ namespace BomberMan
                 Console.WriteLine("The file could not be read: ");
                 Console.WriteLine(e.Message);
             }
-            tiles = new Tile1[numOfTilesAcross, lines.Count];
+            tiles = new Block[numOfTilesAcross, lines.Count];
 
             for (int y = 0; y < Height; y++)
             {
@@ -90,47 +92,43 @@ namespace BomberMan
                 }
             }
         }
-        private Tile1 LoadTile(char _tileType, int _x, int _y)
+        public Block[] getSpawnBlocks() { return spawns; }
+        private Block LoadTile(char _tileType, int _x, int _y)
         {
+            double scale = Game1.scaleFrom32;
             switch (_tileType)
             {
                 case '.':
-                    return new Tile1(String.Empty, 0);
+                    return null;
 
                 case 'B':
-                    return LoadVarietyTile("Block_Invin", 0, 0);
-                //case 'G':
-                //    return LoadVarietyTile("Block_Invin", 5, 5);
-                //case 'O':
-                //    return LoadVarietyTile("Block_Invin", 10, 5);
-                //case 'R':
-                //    return LoadVarietyTile("Block_Invin", 15, 5);
-                //case 'Y':
-                //    return LoadVarietyTile("Block_Invin", 20, 5);
-
-                //case 'b':
-                //    return LoadVarietyTile("Block_Invin", 0, 5);
-                //case 'g':
-                //    return LoadVarietyTile("Block_Invin", 5, 5);
-                //case 'o':
-                //    return LoadVarietyTile("Block_Invin", 10, 5);
-                //case 'r':
-                //    return LoadVarietyTile("Block_Invin", 15, 5);
-                //case 'y':
-                //    return LoadVarietyTile("Block_Invin", 20, 5);
-
+                    return new Block((int)(_x*32*scale), (int)(_y * 32 * scale),BlockState.Impassable);
+                case 'N':
+                    return new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Impassable);
+                case '1':
+                    spawns[0]= new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    return spawns[0];
+                case '2':
+                    spawns[1] = new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    return spawns[1];
+                case '3':
+                    spawns[2] = new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    return spawns[2];
+                case '4':
+                    spawns[3] = new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    return spawns[3];
                 default:
                     throw new NotSupportedException(String.Format("Unsupported tile type character '{0}' at position {1}, {2}.", _tileType, _x, _y));
 
             }
         }
 
-        private Tile1 LoadVarietyTile(string _tileSheetName, int _colorRow, int _variationCount)
-        {
-            int index = random.Next(_variationCount);
-            int tileSheetIndex = _colorRow + index;
-            return new Tile1(_tileSheetName, tileSheetIndex);
-        }
+        //private Tile LoadVarietyTile(string _tileSheetName, int _colorRow, int _variationCount)
+        //{
+        //    int index = random.Next(_variationCount);
+        //    int tileSheetIndex = _colorRow + index;
+        //    return new Tile(_tileSheetName, tileSheetIndex);
+        //}
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
@@ -139,17 +137,20 @@ namespace BomberMan
 
         private void DrawTiles(SpriteBatch spriteBatch)
         {
+            
             for (int y = 0; y < Height; ++y)
             {
                 for (int x = 0; x < Width; ++x)
                 {
-                    if (tileSheets.ContainsKey(tiles[x, y].TileSheetName))
+                    if (tiles[x, y] != null)
                     {
-                        Vector2 position = new Vector2(x, y) * Tile1.size;
-                        spriteBatch.Draw(tileSheets[tiles[x, y].TileSheetName], position, TileSourceRecs[tiles[x, y].TileSheetIndex], Color.White);
+                        
+                        tiles[x, y].Draw();
                     }
+                    
                 }
             }
+
         }
         public void Dispose()
         {
