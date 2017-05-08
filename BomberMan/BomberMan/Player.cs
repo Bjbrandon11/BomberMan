@@ -13,7 +13,6 @@ namespace BomberMan
         public int lives;
         const int INITIAL_LIVES = 5;
         bool usingKeyboard;
-        Rectangle location;//where the player is on the screen
         //readonly is a keyword that allows the variable to be assigned once then not changed
         readonly PlayerIndex playerNum;//the number of which controller the player has
         GamePadState oldGPS;//what the state of the game pad was last frame
@@ -27,7 +26,7 @@ namespace BomberMan
             bombPlaced = false;
             usingKeyboard = true;
             text = new Tile(0, 0, 32, 32, Tile.TextureList["Man"]);
-            this.location = new Rectangle((int)(location.X-(16)*Game1.scaleFrom32),(int)(location.Y-(16)*Game1.scaleFrom32),(int)(Game1.scaleFrom32*32), (int)(Game1.scaleFrom32 * 32));
+            hitBox = new Rectangle((int)(location.X-(16)*Game1.scaleFrom32),(int)(location.Y-(16)*Game1.scaleFrom32),(int)(Game1.scaleFrom32*32), (int)(Game1.scaleFrom32 * 32));
             oldGPS = GamePad.GetState(playerNum);
             oldKb = Keyboard.GetState();
             lives = INITIAL_LIVES;
@@ -44,11 +43,11 @@ namespace BomberMan
 
         public void placeBomb()
         {
-            int bottom = this.location.Bottom;
-            int center = this.location.Center.X;
+            int bottom = this.hitBox.Bottom;
+            int center = this.hitBox.Center.X;
             bombPlaced = true;
             //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
-            Game1.EntityList.Add(new Bomb(location.Center,new Timer(.75),2));
+            Game1.EntityList.Add(new Bomb(hitBox.Center,new Timer(.75),2));
         }
 
         public override void Update()
@@ -60,6 +59,16 @@ namespace BomberMan
             {
                 if (kb.IsKeyDown(Keys.Space) && oldKb.IsKeyUp(Keys.Space))
                     placeBomb();
+                if (kb.IsKeyDown(Keys.Left))
+                    move(-5,0);
+                if (kb.IsKeyDown(Keys.Right))
+                    move(5, 0);
+                if (kb.IsKeyDown(Keys.Up))
+                    move(0, -5);
+                if (kb.IsKeyDown(Keys.Down))
+                    move(0 , 5);
+                if (GameHolder.level.Intersects(hitBox))
+                    Console.WriteLine("STUCK");
             }
             else
             {
@@ -69,6 +78,28 @@ namespace BomberMan
             //End of update logic
             oldGPS = gps;
             oldKb = kb;
+        }
+        public void move(int x,int y)
+        {
+           
+            Rectangle futureRect = new Rectangle(hitBox.X+x, hitBox.Y+y, hitBox.Width, hitBox.Height);
+            while(futureRect.X!=hitBox.X && futureRect.Y!=hitBox.Y)
+            {
+                if (!GameHolder.level.Intersects(futureRect))
+                    break;
+                if (futureRect.X != hitBox.X)
+                {
+                    futureRect = new Rectangle(futureRect.X + (x-(x-1)), hitBox.Y , hitBox.Width, hitBox.Height);
+                }
+                if (futureRect.X != hitBox.X)
+                {
+                    futureRect = new Rectangle(futureRect.X , hitBox.Y + (y - (y - 1)), hitBox.Width, hitBox.Height);
+                }
+                
+            }
+            if (!GameHolder.level.Intersects(futureRect))
+                hitBox = futureRect;
+
         }
         public bool CheckIfAllDead(Rectangle explodeRect)
         {
@@ -86,7 +117,7 @@ namespace BomberMan
         }
         public override void Draw(SpriteBatch spritebatch)
         {
-            text.Draw(location);
+            text.Draw(hitBox);
         }
 
     }
