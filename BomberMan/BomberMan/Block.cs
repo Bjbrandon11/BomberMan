@@ -24,6 +24,7 @@ namespace BomberMan
             switch(state)
             {
                 case BlockState.Impassable: text = new Tile(0, 0, 32, 32, Tile.TextureList["Block_Invin"]);break;
+                case BlockState.Breakable: text = new Tile(0, 0, 32, 32, Tile.TextureList["break"]); break;
                 case BlockState.Spawn: text = new Tile(0, 0, 32, 32, Tile.TextureList["Block_Invin"]); break;
             }
         }

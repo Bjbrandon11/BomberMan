@@ -46,7 +46,7 @@ namespace BomberMan
 
             tileSheets = new Dictionary<string, Texture2D>();
             tileSheets.Add("Block_Invin", Content.Load<Texture2D>("Textures/Tiles/Block_Invin"));
-
+            tileSheets.Add("break", Content.Load<Texture2D>("Textures/Tiles/break"));
             TileSourceRecs = new Dictionary<int, Rectangle>();
             for (int i = 0; i < TilesPerRow * NumRowsPerSheet; i++)
             {
@@ -114,7 +114,7 @@ namespace BomberMan
                 case 'B':
                     return new Block((int)(_x*32*scale), (int)(_y * 32 * scale),BlockState.Impassable);
                 case 'N':
-                    return new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Impassable);
+                    return new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Breakable);
                 case '1':
                     spawns[0]= new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
                     return spawns[0];
