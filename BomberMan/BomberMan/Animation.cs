@@ -14,9 +14,9 @@ namespace BomberMan
         {
             Bomb = new Animation(((Tile[])Tile.bombAnimation.Clone()), 3);
         }
-        private Tile[] tiles;
-        private int fpt;
-        private int currentFrames;
+        public Tile[] tiles;
+        public int fpt;
+        public int currentFrames;
         public Animation(Tile[] tileList,int FramesPerTile)
         {
             this.tiles = tileList;
