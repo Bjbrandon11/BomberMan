@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 
 namespace BomberMan
 {
-    class Timer
+    public class Timer
     {
         protected int count;//this is the number of frames that have gone by since it started
         protected int frequency;//this is how often the action occurs
@@ -19,6 +19,7 @@ namespace BomberMan
         }
         public Timer(double seconds) : this((int)(seconds * FRAMES_PER_SECOND))
         { }
+        public bool canUse() { return count >= frequency; }
         public void Play()
         {
             isRunning = true;
@@ -33,11 +34,6 @@ namespace BomberMan
             if (isRunning)
             {
                 count++;
-                if (count >= frequency)
-                {
-                    result = true;
-                    Reset();
-                }
             }
             return result;
         }

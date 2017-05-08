@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BomberMan
 {
-    abstract class Entity
+    public abstract class Entity
     {
         
         private int Height;
