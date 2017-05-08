@@ -47,11 +47,7 @@ namespace BomberMan
             int center = this.hitBox.Center.X;
             bombPlaced = true;
             //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
-<<<<<<< HEAD
-            Game1.EntityList.Add(new Bomb(location.Center, new Timer(.75), 2));
-=======
             Game1.EntityList.Add(new Bomb(hitBox.Center,new Timer(.75),2));
->>>>>>> refs/remotes/origin/master
         }
 
         public override void Update()

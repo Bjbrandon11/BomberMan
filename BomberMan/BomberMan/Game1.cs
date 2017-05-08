@@ -67,7 +67,6 @@ namespace BomberMan
 
         protected override void Update(GameTime gameTime)
         {
-<<<<<<< HEAD
             KeyboardState kb = Keyboard.GetState();
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || kb.IsKeyDown(Keys.Escape))
@@ -82,7 +81,6 @@ namespace BomberMan
             {
                 p.Update();
             }
-=======
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
             // TODO: Add your update logic here
@@ -90,7 +88,6 @@ namespace BomberMan
                 p.Update();
             foreach (Entity e in EntityList)
                 e.Update();
->>>>>>> refs/remotes/origin/master
             base.Update(gameTime);
         }
 
