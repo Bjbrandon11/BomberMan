@@ -12,7 +12,7 @@ namespace BomberMan
     class Layout : IDisposable
     {
         private Block[,] tiles;
-        private Block[,] locations;
+        //private Block[,] locations;
         private Dictionary<string, Texture2D> tileSheets;
         public Dictionary<int, Rectangle> TileSourceRecs;
         Block[] spawns = new Block[4];

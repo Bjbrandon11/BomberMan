@@ -119,3 +119,5 @@ C:\Users\Lenovo\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Bom
 C:\Users\Lenovo\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.pdb
 C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb
 C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb
+C:\Users\Lenovo\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb
+C:\Users\Lenovo\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb

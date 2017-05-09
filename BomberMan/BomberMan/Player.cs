@@ -26,7 +26,7 @@ namespace BomberMan
             bombPlaced = false;
             usingKeyboard = true;
             text = new Tile(0, 0, 32, 32, Tile.TextureList["Man"]);
-            hitBox = new Rectangle((int)(location.X-(16)*Game1.scaleFrom32),(int)(location.Y-(16)*Game1.scaleFrom32),(int)(Game1.scaleFrom32*32), (int)(Game1.scaleFrom32 * 32));
+            hitBox = new Rectangle((int)(location.X - (16) * Game1.scaleFrom32), (int)(location.Y - (16) * Game1.scaleFrom32), (int)(Game1.scaleFrom32 * 32), (int)(Game1.scaleFrom32 * 32));
             oldGPS = GamePad.GetState(playerNum);
             oldKb = Keyboard.GetState();
             lives = INITIAL_LIVES;
@@ -43,15 +43,15 @@ namespace BomberMan
 
         public void placeBomb()
         {
-            int bottom = this.hitBox.Bottom;
-            int center = this.hitBox.Center.X;
-            bombPlaced = true;
-            //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
-<<<<<<< HEAD
-            Game1.EntityList.Add(new Bomb(location.Center, new Timer(.75), 2));
-=======
-            Game1.EntityList.Add(new Bomb(hitBox.Center,new Timer(.75),2));
->>>>>>> refs/remotes/origin/master
+            /*if (!bombPlaced)
+            {*/
+                int bottom = this.hitBox.Bottom;
+                int center = this.hitBox.Center.X;
+                bombPlaced = true;
+                //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
+
+                Game1.EntityList.Add(new Bomb(hitBox.Center, new Timer(.75), 2));
+            //}
         }
 
         public override void Update()
