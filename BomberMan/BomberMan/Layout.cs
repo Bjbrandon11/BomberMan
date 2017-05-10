@@ -11,7 +11,7 @@ namespace BomberMan
 {
     class Layout : IDisposable
     {
-        private Block[,] tiles;
+        public Block[,] tiles;
         private Block[,] locations;
         private Dictionary<string, Texture2D> tileSheets;
         public Dictionary<int, Rectangle> TileSourceRecs;
@@ -109,23 +109,23 @@ namespace BomberMan
             switch (_tileType)
             {
                 case '.':
-                    return null;
+                    return new Block((int)Math.Ceiling(_x * 32 * scale), (int)Math.Ceiling(_y * 32 * scale), BlockState.Passable); 
 
                 case 'B':
-                    return new Block((int)(_x*32*scale), (int)(_y * 32 * scale),BlockState.Impassable);
+                    return new Block((int)Math.Ceiling(_x*32*scale), (int)Math.Ceiling(_y * 32 * scale),BlockState.Impassable);
                 case 'N':
-                    return new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Breakable);
+                    return new Block((int)Math.Ceiling(_x * 32 * scale), (int)Math.Ceiling(_y * 32 * scale), BlockState.Breakable);
                 case '1':
-                    spawns[0]= new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    spawns[0]= new Block((int)Math.Ceiling(_x * 32 * scale), (int)Math.Ceiling(_y * 32 * scale), BlockState.Spawn);
                     return spawns[0];
                 case '2':
-                    spawns[1] = new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    spawns[1] = new Block((int)Math.Ceiling(_x * 32 * scale), (int)Math.Ceiling(_y * 32 * scale), BlockState.Spawn);
                     return spawns[1];
                 case '3':
-                    spawns[2] = new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    spawns[2] = new Block((int)Math.Ceiling(_x * 32 * scale), (int)Math.Ceiling(_y * 32 * scale), BlockState.Spawn);
                     return spawns[2];
                 case '4':
-                    spawns[3] = new Block((int)(_x * 32 * scale), (int)(_y * 32 * scale), BlockState.Spawn);
+                    spawns[3] = new Block((int)Math.Ceiling(_x * 32 * scale), (int)Math.Ceiling(_y * 32 * scale), BlockState.Spawn);
                     return spawns[3];
                 default:
                     throw new NotSupportedException(String.Format("Unsupported tile type character '{0}' at position {1}, {2}.", _tileType, _x, _y));

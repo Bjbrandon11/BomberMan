@@ -26,6 +26,7 @@ namespace BomberMan
                 case BlockState.Impassable: text = new Tile(0, 0, 32, 32, Tile.TextureList["Block_Invin"]);break;
                 case BlockState.Breakable: text = new Tile(0, 0, 32, 32, Tile.TextureList["break"]); break;
                 case BlockState.Spawn: text = new Tile(0, 0, 32, 32, Tile.TextureList["Block_Invin"]); break;
+                
             }
         }
         public Block(int x, int y, Tile text, BlockState state)
@@ -42,11 +43,14 @@ namespace BomberMan
         {
             this.item = receive;
         }
-        
+        public Block newState(BlockState bs)
+        {
+            return new Block(hitBox.X, hitBox.Y, bs);
+        }
         public bool Intersects(Rectangle rec) { return rec.Intersects(hitBox); }
         public void Draw()
         {
-            if(currentState!=BlockState.Spawn)
+            if(currentState!=BlockState.Spawn && currentState != BlockState.Passable && currentState!=BlockState.Explosion)
             text.Draw(hitBox);
         }
 

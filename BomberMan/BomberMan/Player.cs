@@ -60,13 +60,13 @@ namespace BomberMan
                 if (kb.IsKeyDown(Keys.Space) && oldKb.IsKeyUp(Keys.Space))
                     placeBomb();
                 if (kb.IsKeyDown(Keys.Left))
-                    move(-5,0);
+                    move(-2,0);
                 if (kb.IsKeyDown(Keys.Right))
-                    move(5, 0);
+                    move(2, 0);
                 if (kb.IsKeyDown(Keys.Up))
-                    move(0, -5);
+                    move(0, -2);
                 if (kb.IsKeyDown(Keys.Down))
-                    move(0 , 5);
+                    move(0 , 2);
                 if (GameHolder.level.Intersects(hitBox))
                     Console.WriteLine("STUCK");
             }
