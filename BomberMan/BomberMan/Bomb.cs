@@ -16,7 +16,7 @@ namespace BomberMan
         readonly int Range;
         //public bool isExplosionFinished;
 
-        const int SIZE = 48;
+        int SIZE = (int)(16*Game1.scaleFrom32*1.5);
         Animation anim;
 
         public Block[,] Maze;
@@ -35,10 +35,11 @@ namespace BomberMan
             anim.Update();
             if (explode.Update())
             {
-                Explosion();
+                
             }
             if (anim.completed > 0)
             {
+                Explosion();
                 Game1.EntityList.Remove(this);
             }
             
@@ -56,49 +57,54 @@ namespace BomberMan
             ///</remarks>
             //Maze[MazeIndex.X, MazeIndex.Y]
             //bool isBlocked = true;
+            Maze=GameHolder.level.tiles;
             for (int i = 1; i <= Range; i++)
             {
-                if (Maze[MazeIndex.X + i, MazeIndex.Y].currentState == BlockState.Breakable)
+                BlockState bs = Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))].currentState;
+                if (bs == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
+                    Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))]=Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))].newState(BlockState.Explosion);
                     break;
                 }
-                else
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
+                else if (bs != BlockState.Impassable)
+                    Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))]=Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))].newState(BlockState.Explosion);
             }
             for (int i = -1; i >= -Range; i--)
             {
-                if (Maze[MazeIndex.X + i, MazeIndex.Y].currentState == BlockState.Breakable)
+                BlockState bs = Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))].currentState;
+                if (bs == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
+                    Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))]=Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))].newState(BlockState.Explosion);
                     break;
                 }
-                else
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
+                else if (bs != BlockState.Impassable)
+                    Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))]=Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) + i, (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))].newState(BlockState.Explosion);
             }
             for (int i = 1; i <= Range; i++)
             {
-                if (Maze[MazeIndex.X, MazeIndex.Y + i].currentState == BlockState.Breakable)
+                BlockState bs = Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) , (int)(hitBox.Center.Y/(32*Game1.scaleFrom32))+i].currentState;
+                if (bs == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
+                    Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) , (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i]=Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) , (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i].newState(BlockState.Explosion);
                     break;
                 }
-                else
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
+                else if (bs != BlockState.Impassable)
+                    Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) , (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i]=Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) , (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i].newState(BlockState.Explosion);
             }
             for (int i = -1; i >= -Range; i--)
             {
-                if (Maze[MazeIndex.X, MazeIndex.Y + i].currentState == BlockState.Breakable)
+                BlockState bs = Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)), (int)(hitBox.Center.Y/(32*Game1.scaleFrom32)) + i].currentState;
+                if (bs == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
+                    Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) , (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i]=Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) , (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i].newState(BlockState.Explosion);
                     break;
                 }
-                else
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
+                else if (bs != BlockState.Impassable)
+                    Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) , (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i]=Maze[(int)(hitBox.Center.X/(32*Game1.scaleFrom32)) , (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i].newState(BlockState.Explosion);
             }
 
 

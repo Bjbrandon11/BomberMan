@@ -47,11 +47,7 @@ namespace BomberMan
             int center = this.hitBox.Center.X;
             bombPlaced = true;
             //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
-<<<<<<< HEAD
-            Game1.EntityList.Add(new Bomb(location.Center, new Timer(.75), 2));
-=======
             Game1.EntityList.Add(new Bomb(hitBox.Center,new Timer(.75),2));
->>>>>>> refs/remotes/origin/master
         }
 
         public override void Update()
@@ -64,13 +60,13 @@ namespace BomberMan
                 if (kb.IsKeyDown(Keys.Space) && oldKb.IsKeyUp(Keys.Space))
                     placeBomb();
                 if (kb.IsKeyDown(Keys.Left))
-                    move(-5,0);
+                    move(-2,0);
                 if (kb.IsKeyDown(Keys.Right))
-                    move(5, 0);
+                    move(2, 0);
                 if (kb.IsKeyDown(Keys.Up))
-                    move(0, -5);
+                    move(0, -2);
                 if (kb.IsKeyDown(Keys.Down))
-                    move(0 , 5);
+                    move(0 , 2);
                 if (GameHolder.level.Intersects(hitBox))
                     Console.WriteLine("STUCK");
             }
