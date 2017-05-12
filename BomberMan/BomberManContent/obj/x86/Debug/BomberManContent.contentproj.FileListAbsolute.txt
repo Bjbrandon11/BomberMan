@@ -5,3 +5,4 @@ C:\Users\217665\Documents\GitHub\BomberMan\BomberMan\BomberManContent\obj\x86\De
 \\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberManContent\obj\x86\Debug\BomberManContent.contentprojResolveAssemblyReference.cache
 C:\Users\Lenovo\Documents\GitHub\BomberMan\BomberMan\BomberManContent\obj\x86\Debug\BomberManContent.contentprojResolveAssemblyReference.cache
 C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberManContent\obj\x86\Debug\BomberManContent.contentprojResolveAssemblyReference.cache
+H:\VGD\Bomber\BomberMan\BomberMan\BomberManContent\obj\x86\Debug\BomberManContent.contentprojResolveAssemblyReference.cache
