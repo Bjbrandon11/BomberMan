@@ -143,3 +143,10 @@ C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\obj\x86\Debug\B
 C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.exe
 C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.pdb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp1.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp2.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp3.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp4.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp5.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp6.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp7.xnb

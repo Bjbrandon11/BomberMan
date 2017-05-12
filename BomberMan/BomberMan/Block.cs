@@ -34,7 +34,7 @@ namespace BomberMan
         {
             this.text = text;
             hitBox = new Rectangle(x, y, (int)(SIZE*Game1.scaleFrom32),(int)(SIZE*Game1.scaleFrom32));
-            //this.breakable = breakable;
+
             //broken = false;
             this.currentState = state;
         }
@@ -43,14 +43,19 @@ namespace BomberMan
         {
             this.item = receive;
         }
-        public Block newState(BlockState bs)
+        public void newState(BlockState bs)
         {
-            return new Block(hitBox.X, hitBox.Y, bs);
+            this.currentState = bs;
+        }
+        public void newState(Tile text,BlockState bs)
+        {
+            this.text = text;
+            this.currentState = bs;
         }
         public bool Intersects(Rectangle rec) { return rec.Intersects(hitBox); }
         public void Draw()
         {
-            if(currentState!=BlockState.Spawn && currentState != BlockState.Passable && currentState!=BlockState.Explosion)
+            if(currentState!=BlockState.Spawn && currentState != BlockState.Passable )
             text.Draw(hitBox);
         }
 
