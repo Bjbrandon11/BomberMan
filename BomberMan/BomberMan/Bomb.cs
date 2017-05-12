@@ -58,31 +58,36 @@ namespace BomberMan
             //Maze[MazeIndex.X, MazeIndex.Y]
             //bool isBlocked = true;
             Maze = GameHolder.level.tiles;
-            Maze[(int)(hitBox.Center.X / (32 * Game1.scaleFrom32)), (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))].newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CENTER"]),BlockState.Explosion);
             
-            for (int i = 1; i <= Range; i++)
+            
+            for (int i = 0; i <= Range; i++)
             {
-                int x = (int)(hitBox.Center.X / (32 * Game1.scaleFrom32)) + i;
-                int y = (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32));
+                int x = (int)((double)hitBox.Center.X / (32 * Game1.scaleFrom32)) + i;
+                int y = (int)((double)hitBox.Center.Y / (32 * Game1.scaleFrom32));
                 if (x >= Maze.GetLength(0))
                     break;
                 Block b = Maze[x, y];
-                if (b.currentState == BlockState.Breakable)
+                if (b.currentState == BlockState.Breakable )
                 {
                     //isBlocked = true;
                     b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_2"]), BlockState.Explosion);
                     break;
                 }
+                else if(Maze[x + 1, y].currentState == BlockState.Impassable)
+                {
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_2"]), BlockState.Explosion);
+                    break;
+                }
                 else if (b.currentState != BlockState.Impassable)
-                    if(x+1 > Range && x+1 >= Maze.GetLength(1))
+                    if(i+1 > Range || x+1 >= Maze.GetLength(1))
                         b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_2"]), BlockState.Explosion);
                     else
                         b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_2"]), BlockState.Explosion);
             }
-            for (int i = -1; i >= -Range; i--)
+            for (int i = 0; i >= -Range; i--)
             {
-                int x = (int)(hitBox.Center.X / (32 * Game1.scaleFrom32)) + i;
-                int y = (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32));
+                int x = (int)((double)hitBox.Center.X / (32 * Game1.scaleFrom32)) + i;
+                int y = (int)((double)hitBox.Center.Y / (32 * Game1.scaleFrom32));
                 if (x <0)
                     break;
                 Block b = Maze[x, y];
@@ -92,16 +97,21 @@ namespace BomberMan
                     b.newState(new Tile(0,0,32,32,Tile.TextureList["EXP_END_4"]),BlockState.Explosion);
                     break;
                 }
+                else if (Maze[x -1, y].currentState == BlockState.Impassable)
+                {
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_4"]), BlockState.Explosion);
+                    break;
+                }
                 else if (b.currentState != BlockState.Impassable)
-                    if (x + 1 > Range && x + 1 >= Maze.GetLength(1))
-                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_2"]), BlockState.Explosion);
+                    if (i + 1 > Range && x + 1 >= Maze.GetLength(1))
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_4"]), BlockState.Explosion);
                     else
                         b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_2"]), BlockState.Explosion);
             }
-            for (int i = 1; i <= Range ; i++)
+            for (int i = 0; i <= Range ; i++)
             {
-                int x = (int)(hitBox.Center.X / (32 * Game1.scaleFrom32));
-                int y = (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i;
+                int x = (int)((double)hitBox.Center.X / (32 * Game1.scaleFrom32));
+                int y = (int)((double)hitBox.Center.Y / (32 * Game1.scaleFrom32))+i;
                 if (y >= Maze.GetLength(1))
                     break;
                 Block b = Maze[x, y];
@@ -111,13 +121,21 @@ namespace BomberMan
                     b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_3"]), BlockState.Explosion);
                     break;
                 }
+                else if (Maze[x, y+1].currentState == BlockState.Impassable)
+                {
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_3"]), BlockState.Explosion);
+                    break;
+                }
                 else if (b.currentState != BlockState.Impassable)
-                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_1"]), BlockState.Explosion);
+                    if (i + 1 > Range && x + 1 >= Maze.GetLength(1))
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_3"]), BlockState.Explosion);
+                    else
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_1"]), BlockState.Explosion);
             }
-            for (int i = -1; i >= -Range ; i--)
+            for (int i = 0; i >= -Range ; i--)
             {
-                int x = (int)(hitBox.Center.X / (32 * Game1.scaleFrom32));
-                int y = (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))+i;
+                int x = (int)((double)hitBox.Center.X / (32 * Game1.scaleFrom32));
+                int y = (int)((double)hitBox.Center.Y / (32 * Game1.scaleFrom32))+i;
                 if (y <0)
                     break;
                 Block b = Maze[x, y];
@@ -127,10 +145,18 @@ namespace BomberMan
                     b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_1"]), BlockState.Explosion);
                     break;
                 }
+                else if (Maze[x, y-1].currentState == BlockState.Impassable)
+                {
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_1"]), BlockState.Explosion);
+                    break;
+                }
                 else if (b.currentState != BlockState.Impassable)
-                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_1"]), BlockState.Explosion);
+                    if (i+1 > Range && x + 1 >= Maze.GetLength(1))
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_1"]), BlockState.Explosion);
+                    else
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_1"]), BlockState.Explosion);
             }
-
+            Maze[(int)(hitBox.Center.X / (32 * Game1.scaleFrom32)), (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))].newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CENTER"]), BlockState.Explosion);
 
         }
 
