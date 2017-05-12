@@ -49,7 +49,7 @@ namespace BomberMan
             Tile.LoadContent();
             LoadLevel();
             spawns = level.getSpawnBlocks();
-            players.Add(new Player(spawns[0].hitBox.Center));
+            players.Add(new Player(PlayerIndex.One, spawns[0].hitBox.Center));
             Animation.LoadContent();
         }
 
@@ -81,8 +81,6 @@ namespace BomberMan
             {
                 p.Update();
             }
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
             // TODO: Add your update logic here
             foreach (Player p in players)
                 p.Update();

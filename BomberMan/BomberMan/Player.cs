@@ -47,7 +47,7 @@ namespace BomberMan
             int center = this.hitBox.Center.X;
             bombPlaced = true;
             //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
-            Game1.EntityList.Add(new Bomb(hitBox.Center,new Timer(.75),2));
+            Game1.EntityList.Add(new Bomb(hitBox.Center, new Timer(.75), 2));
         }
 
         public override void Update()
@@ -72,7 +72,12 @@ namespace BomberMan
             }
             else
             {
-
+                if (gps.IsButtonDown(Buttons.A) && oldGPS.IsButtonUp(Buttons.A))
+                    placeBomb();
+                move((int)(gps.ThumbSticks.Left.X * 2), 0);
+                move(0, (int)(gps.ThumbSticks.Left.Y * -2));
+                
+                                
             }
 
             //End of update logic
