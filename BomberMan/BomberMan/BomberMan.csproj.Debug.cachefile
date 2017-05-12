@@ -3,4 +3,11 @@ Content\Textures\Sprites\Bombs\Explosion-sheet.xnb
 Content\Textures\Tiles\Block_Invin.xnb
 Content\Textures\Tiles\break.xnb
 Content\Textures\Sprites\Lives\lives.xnb
+Content\Textures\Tiles\Explosions\Exp1.xnb
+Content\Textures\Tiles\Explosions\Exp2.xnb
+Content\Textures\Tiles\Explosions\Exp3.xnb
+Content\Textures\Tiles\Explosions\Exp4.xnb
+Content\Textures\Tiles\Explosions\Exp5.xnb
+Content\Textures\Tiles\Explosions\Exp6.xnb
+Content\Textures\Tiles\Explosions\Exp7.xnb
 Content\Level\Level01.txt
