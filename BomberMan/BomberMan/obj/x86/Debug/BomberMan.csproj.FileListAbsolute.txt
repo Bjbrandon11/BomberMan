@@ -119,3 +119,72 @@ C:\Users\Lenovo\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Bom
 C:\Users\Lenovo\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.pdb
 C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb
 C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Level\Level01.txt
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\BomberMan.exe
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\BomberMan.pdb
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.csprojResolveAssemblyReference.cache
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.exe
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.pdb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp1.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp2.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp3.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp4.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp5.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp6.xnb
+C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp7.xnb
+\\Fisd-fs4\HS\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb
+\\Fisd-fs4\HS\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb
+\\Fisd-fs4\HS\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp1.xnb
+\\Fisd-fs4\HS\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp2.xnb
+\\Fisd-fs4\HS\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp3.xnb
+\\Fisd-fs4\HS\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp4.xnb
+\\Fisd-fs4\HS\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp5.xnb
+\\Fisd-fs4\HS\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp6.xnb
+\\Fisd-fs4\HS\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp7.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp1.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp2.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp3.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp4.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp5.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp6.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp7.xnb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Level\Level01.txt
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\BomberMan.exe
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\BomberMan.pdb
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.dll
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.xml
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.csprojResolveAssemblyReference.cache
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.exe
+H:\VGD\Bomber\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.pdb

@@ -14,8 +14,9 @@ namespace BomberMan
         /// </summary>
         Timer explode;
         readonly int Range;
+        //public bool isExplosionFinished;
 
-        const int SIZE = 48;
+        int SIZE = (int)(16*Game1.scaleFrom32*1.5);
         Animation anim;
 
         public Block[,] Maze;
@@ -24,6 +25,7 @@ namespace BomberMan
         public Bomb(Point p, Timer time, int range) : base(p)
         {
             Range = range;
+            //isExplosionFinished = false;
             explode = time;
             base.hitBox = new Rectangle(p.X - SIZE / 2, p.Y - SIZE / 2, SIZE, SIZE);
             anim = Animation.Bomb.Clone(4);
@@ -33,7 +35,12 @@ namespace BomberMan
             anim.Update();
             if (explode.Update())
             {
+                
+            }
+            if (anim.completed > 0)
+            {
                 Explosion();
+                Game1.EntityList.Remove(this);
             }
             
         }
@@ -50,50 +57,106 @@ namespace BomberMan
             ///</remarks>
             //Maze[MazeIndex.X, MazeIndex.Y]
             //bool isBlocked = true;
-            for (int i = 1; i <= Range; i++)
+            Maze = GameHolder.level.tiles;
+            
+            
+            for (int i = 0; i <= Range; i++)
             {
-                if (Maze[MazeIndex.X + i, MazeIndex.Y].currentState == BlockState.Breakable)
+                int x = (int)((double)hitBox.Center.X / (32 * Game1.scaleFrom32)) + i;
+                int y = (int)((double)hitBox.Center.Y / (32 * Game1.scaleFrom32));
+                if (x >= Maze.GetLength(0))
+                    break;
+                Block b = Maze[x, y];
+                if (b.currentState == BlockState.Breakable )
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_2"]), BlockState.Explosion);
                     break;
                 }
-                else
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
+                else if(Maze[x + 1, y].currentState == BlockState.Impassable)
+                {
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_2"]), BlockState.Explosion);
+                    break;
+                }
+                else if (b.currentState != BlockState.Impassable)
+                    if(i+1 > Range || x+1 >= Maze.GetLength(1))
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_2"]), BlockState.Explosion);
+                    else
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_2"]), BlockState.Explosion);
             }
-            for (int i = -1; i >= -Range; i--)
+            for (int i = 0; i >= -Range; i--)
             {
-                if (Maze[MazeIndex.X + i, MazeIndex.Y].currentState == BlockState.Breakable)
+                int x = (int)((double)hitBox.Center.X / (32 * Game1.scaleFrom32)) + i;
+                int y = (int)((double)hitBox.Center.Y / (32 * Game1.scaleFrom32));
+                if (x <0)
+                    break;
+                Block b = Maze[x, y];
+                if (b.currentState == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
+                    b.newState(new Tile(0,0,32,32,Tile.TextureList["EXP_END_4"]),BlockState.Explosion);
                     break;
                 }
-                else
-                    Maze[MazeIndex.X + i, MazeIndex.Y].currentState = BlockState.Explosion;
+                else if (Maze[x -1, y].currentState == BlockState.Impassable)
+                {
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_4"]), BlockState.Explosion);
+                    break;
+                }
+                else if (b.currentState != BlockState.Impassable)
+                    if (i + 1 > Range && x + 1 >= Maze.GetLength(1))
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_4"]), BlockState.Explosion);
+                    else
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_2"]), BlockState.Explosion);
             }
-            for (int i = 1; i <= Range; i++)
+            for (int i = 0; i <= Range ; i++)
             {
-                if (Maze[MazeIndex.X, MazeIndex.Y + i].currentState == BlockState.Breakable)
+                int x = (int)((double)hitBox.Center.X / (32 * Game1.scaleFrom32));
+                int y = (int)((double)hitBox.Center.Y / (32 * Game1.scaleFrom32))+i;
+                if (y >= Maze.GetLength(1))
+                    break;
+                Block b = Maze[x, y];
+                if (b.currentState == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_3"]), BlockState.Explosion);
                     break;
                 }
-                else
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
+                else if (Maze[x, y+1].currentState == BlockState.Impassable)
+                {
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_3"]), BlockState.Explosion);
+                    break;
+                }
+                else if (b.currentState != BlockState.Impassable)
+                    if (i + 1 > Range && x + 1 >= Maze.GetLength(1))
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_3"]), BlockState.Explosion);
+                    else
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_1"]), BlockState.Explosion);
             }
-            for (int i = -1; i >= -Range; i--)
+            for (int i = 0; i >= -Range ; i--)
             {
-                if (Maze[MazeIndex.X, MazeIndex.Y + i].currentState == BlockState.Breakable)
+                int x = (int)((double)hitBox.Center.X / (32 * Game1.scaleFrom32));
+                int y = (int)((double)hitBox.Center.Y / (32 * Game1.scaleFrom32))+i;
+                if (y <0)
+                    break;
+                Block b = Maze[x, y];
+                if (b.currentState == BlockState.Breakable)
                 {
                     //isBlocked = true;
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_1"]), BlockState.Explosion);
                     break;
                 }
-                else
-                    Maze[MazeIndex.X, MazeIndex.Y + i].currentState = BlockState.Explosion;
+                else if (Maze[x, y-1].currentState == BlockState.Impassable)
+                {
+                    b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_1"]), BlockState.Explosion);
+                    break;
+                }
+                else if (b.currentState != BlockState.Impassable)
+                    if (i+1 > Range && x + 1 >= Maze.GetLength(1))
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_1"]), BlockState.Explosion);
+                    else
+                        b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_1"]), BlockState.Explosion);
             }
+            Maze[(int)(hitBox.Center.X / (32 * Game1.scaleFrom32)), (int)(hitBox.Center.Y / (32 * Game1.scaleFrom32))].newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CENTER"]), BlockState.Explosion);
 
         }
 

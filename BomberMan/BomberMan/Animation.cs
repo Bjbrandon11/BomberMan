@@ -14,20 +14,25 @@ namespace BomberMan
         {
             Bomb = new Animation(((Tile[])Tile.bombAnimation.Clone()), 3);
         }
-        private Tile[] tiles;
-        private int fpt;
-        private int currentFrames;
+        public Tile[] tiles;
+        public int fpt;
+        public int completed;
+        public int currentFrames;
         public Animation(Tile[] tileList,int FramesPerTile)
         {
             this.tiles = tileList;
             fpt=FramesPerTile;
             currentFrames = 0;
+            completed = 0;
         }
         public void Update()
         {
             currentFrames++;
-            if (currentFrames+1 >= fpt * tiles.Length)
+            if (currentFrames >= fpt * tiles.Length)
+            {
                 currentFrames = 0;
+                completed++;
+            }
         }
         public Animation Clone() { return new Animation((Tile[])tiles.Clone(), fpt); }
         public Animation Clone(int frames) { return new Animation((Tile[])tiles.Clone(), frames); }

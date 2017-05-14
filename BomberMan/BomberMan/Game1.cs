@@ -49,7 +49,7 @@ namespace BomberMan
             Tile.LoadContent();
             LoadLevel();
             spawns = level.getSpawnBlocks();
-            players.Add(new Player(spawns[0].hitBox.Center));
+            players.Add(new Player(PlayerIndex.One, spawns[0].hitBox.Center));
             Animation.LoadContent();
         }
 
@@ -67,8 +67,20 @@ namespace BomberMan
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            KeyboardState kb = Keyboard.GetState();
+            // Allows the game to exit
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || kb.IsKeyDown(Keys.Escape))
                 this.Exit();
+
+            for (int i = EntityList.Count - 1; i >= 0; i--)
+            {
+                EntityList[i].Update();
+            }
+            // TODO: Add your update logic here
+            foreach (Player p in players)
+            {
+                p.Update();
+            }
             // TODO: Add your update logic here
             foreach (Player p in players)
                 p.Update();
