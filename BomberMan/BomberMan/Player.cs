@@ -18,10 +18,13 @@ namespace BomberMan
         readonly PlayerIndex playerNum;//the number of which controller the player has
         GamePadState oldGPS;//what the state of the game pad was last frame
         KeyboardState oldKb;//what the state of the keyboard was last frame
-        
+        const float deadZoneAmount = 0.15f;
+
         Tile text; //will become animation later
         bool bombPlaced;
         const float MAX_SPEED = 35.0f;
+        readonly Color playerColor;
+
         public Player(Point location) : base( location)
         {
             bombPlaced = false;
@@ -39,6 +42,21 @@ namespace BomberMan
         {
             usingKeyboard = false;
             playerNum = number;
+            switch (number)
+            {
+                case PlayerIndex.One:
+                    playerColor = Color.HotPink;
+                    break;
+                case PlayerIndex.Two:
+                    playerColor = Color.Yellow;
+                    break;
+                case PlayerIndex.Three:
+                    playerColor = Color.LawnGreen;
+                    break;
+                case PlayerIndex.Four:
+                    playerColor = Color.Aqua;
+                    break;
+            }
             
         }
 
@@ -50,7 +68,7 @@ namespace BomberMan
             int center = this.hitBox.Center.X;
             bombPlaced = true;
             //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
-            Game1.EntityList.Add(new Bomb(hitBox.Center, new Timer(.75), 2));
+            Game1.EntityList.Add(new Bomb(hitBox.Center, new Timer(.75), 2, playerColor));
         }
 
         public override void Update()
@@ -78,8 +96,12 @@ namespace BomberMan
             {
                 if (gps.IsButtonDown(Buttons.A) && oldGPS.IsButtonUp(Buttons.A))
                     placeBomb();
-                move((int)(gps.ThumbSticks.Left.X * 2), 0);
-                move(0, (int)(gps.ThumbSticks.Left.Y * -2));
+                if (Math.Abs(gps.ThumbSticks.Left.X)>deadZoneAmount||Math.Abs(gps.ThumbSticks.Left.Y)>deadZoneAmount)
+                {
+
+                    move((int)(gps.ThumbSticks.Left.X * 2), 0);
+                    move(0, (int)(gps.ThumbSticks.Left.Y * -2));
+                }
                 
                                 
             }
@@ -131,7 +153,7 @@ namespace BomberMan
         }
         public override void Draw(SpriteBatch spritebatch)
         {
-            text.Draw(hitBox);
+            text.Draw(hitBox,playerColor);
         }
 
     }

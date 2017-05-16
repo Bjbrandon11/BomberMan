@@ -13,6 +13,7 @@ namespace BomberMan
         /// instanceVariables
         /// </summary>
         Timer explode;
+        Color bombColor;
         readonly int Range;
         //public bool isExplosionFinished;
 
@@ -22,8 +23,9 @@ namespace BomberMan
         public Block[,] Maze;
 
 
-        public Bomb(Point p, Timer time, int range) : base(p)
+        public Bomb(Point p, Timer time, int range,Color bombColor) : base(p)
         {
+            this.bombColor = bombColor;
             Range = range;
             //isExplosionFinished = false;
             explode = time;
@@ -47,7 +49,7 @@ namespace BomberMan
         }
         public override void Draw(SpriteBatch spritebatch)
         {
-            anim.Draw(base.hitBox, Color.White);
+            anim.Draw(base.hitBox, bombColor);
         }
 
         public void Explosion()
