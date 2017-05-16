@@ -84,13 +84,17 @@ namespace BomberMan
                 EntityList[i].Update();
             }
             // TODO: Add your update logic here
-            foreach (Player p in players)
+            for (int i = 0; i < players.Count; i++)
             {
+                Player p = players[i];
                 p.Update();
+                if (p.CheckIfAllDead())
+                {
+                    players.Remove(p);
+                    i--;
+                }
             }
             // TODO: Add your update logic here
-            foreach (Player p in players)
-                p.Update();
             foreach (Entity e in EntityList)
                 e.Update();
             base.Update(gameTime);
