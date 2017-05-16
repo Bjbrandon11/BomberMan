@@ -13,6 +13,7 @@ namespace BomberMan
         public int lives;
         const int INITIAL_LIVES = 5;
         bool usingKeyboard;
+        Timer invul;
         //readonly is a keyword that allows the variable to be assigned once then not changed
         readonly PlayerIndex playerNum;//the number of which controller the player has
         GamePadState oldGPS;//what the state of the game pad was last frame
@@ -30,6 +31,8 @@ namespace BomberMan
             oldGPS = GamePad.GetState(playerNum);
             oldKb = Keyboard.GetState();
             lives = INITIAL_LIVES;
+            invul = new Timer(1.5);
+            invul.Play();
             
         }
         public Player(PlayerIndex number, Point location) : this(location)
@@ -54,6 +57,7 @@ namespace BomberMan
         {
             GamePadState gps = GamePad.GetState(playerNum);
             KeyboardState kb = Keyboard.GetState();
+            invul.Update();
             //TODO: write update logic
             if(usingKeyboard)
             {
@@ -79,7 +83,12 @@ namespace BomberMan
                 
                                 
             }
-
+            if (IsHit() && invul.isDone())
+            {
+                lives--;
+                invul.Reset();
+                Console.WriteLine("ouch");
+            }
             //End of update logic
             oldGPS = gps;
             oldKb = kb;
@@ -110,15 +119,15 @@ namespace BomberMan
         {
             return lives == 0;
         }
-        public bool CheckIfDying(Rectangle explodeRect)
+        public bool IsHit()
         {
-            bool result = false;
-            if (hitBox.Intersects(explodeRect))
+            Block[,] lvl=GameHolder.level.tiles;
+            foreach(Block a in lvl)
             {
-                lives--;
-                result = true;
+                if (a.hitBox.Intersects(hitBox) && a.currentState == BlockState.Explosion)
+                    return true;
             }
-            return result;
+            return false;
         }
         public override void Draw(SpriteBatch spritebatch)
         {

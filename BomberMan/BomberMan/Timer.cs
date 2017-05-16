@@ -19,7 +19,6 @@ namespace BomberMan
         }
         public Timer(double seconds) : this((int)(seconds * FRAMES_PER_SECOND))
         { }
-        public bool canUse() { return count >= frequency; }
         public void Play()
         {
             isRunning = true;
@@ -28,14 +27,13 @@ namespace BomberMan
         {
             count = 0;
         }
-        public virtual bool Update()
+        public bool isDone() { return count >= frequency; }
+        public void Update()
         {
-            bool result = false;
             if (isRunning)
             {
                 count++;
             }
-            return result;
         }
         public void End()
         {
