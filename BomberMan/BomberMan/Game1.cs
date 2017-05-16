@@ -49,7 +49,14 @@ namespace BomberMan
             Tile.LoadContent();
             LoadLevel();
             spawns = level.getSpawnBlocks();
-            players.Add(new Player(PlayerIndex.One, spawns[0].hitBox.Center));
+            for (int i = 0; i < 4; i++)
+            {
+                PlayerIndex at = (PlayerIndex)i;
+                if (GamePad.GetState(at).IsConnected)
+                {
+                    players.Add(new Player(at, spawns[i].hitBox.Center));
+                }
+            }
             Animation.LoadContent();
         }
 
