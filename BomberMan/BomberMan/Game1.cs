@@ -78,7 +78,7 @@ namespace BomberMan
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || kb.IsKeyDown(Keys.Escape))
                 this.Exit();
-
+            level.Update();
             for (int i = EntityList.Count - 1; i >= 0; i--)
             {
                 EntityList[i].Update();

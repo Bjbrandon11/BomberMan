@@ -21,7 +21,7 @@ namespace BomberMan
         }
         public bool OverallUpdate()
         {
-            bool result = this.Update();
+            bool result = this.isDone();
             if (result)
             {
                 frequency /= offset;
@@ -32,10 +32,6 @@ namespace BomberMan
             }
             return result;
         }
-        public override bool Update()
-        {
-            bool val = base.Update();
-            return val;
-        }
+ 
     }
 }

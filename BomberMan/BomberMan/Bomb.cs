@@ -35,7 +35,8 @@ namespace BomberMan
         public override void Update()
         {
             anim.Update();
-            if (explode.Update())
+            explode.Update();
+            if (explode.isDone())
             {
                 
             }
@@ -81,7 +82,7 @@ namespace BomberMan
                     break;
                 }
                 else if (b.currentState != BlockState.Impassable)
-                    if(i+1 > Range || x+1 >= Maze.GetLength(1))
+                    if(i+1 > Range && x+1 >= Maze.GetLength(1))
                         b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_2"]), BlockState.Explosion);
                     else
                         b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_CONNECT_2"]), BlockState.Explosion);
