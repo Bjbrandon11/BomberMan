@@ -28,6 +28,7 @@ namespace BomberMan
         public Player(Point location) : base( location)
         {
             bombPlaced = false;
+            playerColor = Color.White;
             usingKeyboard = true;
             text = new Tile(0, 0, 32, 32, Tile.TextureList["Man"]);
             hitBox = new Rectangle((int)(location.X-(16)*Game1.scaleFrom32),(int)(location.Y-(16)*Game1.scaleFrom32),(int)(Game1.scaleFrom32*32), (int)(Game1.scaleFrom32 * 32));

@@ -21,7 +21,7 @@ namespace BomberMan
             foreach (String name in textNames)
                 TextureList.Add(name,Content.Load<Texture2D>(name));*/
             TextureList.Add("Block_Invin", Content.Load<Texture2D>(@"Textures/Tiles/Block_Invin"));
-            TextureList.Add("break", Content.Load<Texture2D>(@"Textures/Tiles/break"));
+            TextureList.Add("break", Content.Load<Texture2D>(@"Textures/Tiles/Block_Break"));
             TextureList.Add("Explosion-sheet", Content.Load<Texture2D>(@"Textures/Sprites/Bombs/Explosion-sheet"));
             TextureList.Add("Man", Content.Load<Texture2D>(@"Textures/Sprites/Man/BomberMan"));
             TextureList.Add("EXP_END_1", Content.Load<Texture2D>(@"Textures/Tiles/Explosions/Exp1"));
