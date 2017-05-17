@@ -57,6 +57,10 @@ namespace BomberMan
                     players.Add(new Player(at, spawns[i].hitBox.Center));
                 }
             }
+            if(players.Count==0)
+            {
+                players.Add(new Player(spawns[0].hitBox.Center));
+            }
             Animation.LoadContent();
         }
 
@@ -98,7 +102,7 @@ namespace BomberMan
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.LightGreen);
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
             foreach (Player p in players)
                 p.Draw(spriteBatch);
