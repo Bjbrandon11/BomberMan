@@ -166,7 +166,7 @@ namespace BomberMan
                 hitBox = futureRect;
 
         }
-        public bool CheckIfAllDead(Rectangle explodeRect)
+        public bool CheckIfAllDead()
         {
             return lives == 0;
         }
