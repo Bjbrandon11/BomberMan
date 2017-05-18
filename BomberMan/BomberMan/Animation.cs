@@ -12,6 +12,9 @@ namespace BomberMan
         public static Animation Bomb,Walk_Side,Walk_Up,Walk_Down; 
         public static void LoadContent()
         {
+            Tile[] temp1 = new Tile[4];
+            Tile[] temp2 = new Tile[4];
+            Tile[] temp3 = new Tile[4];
             Tile[] temp = new Tile[30];
             for (int i = 0; i < temp.Length; i++)
                 temp[i] = new Tile(i * 16, 0, 16, 16, Tile.TextureList["Explosion-sheet"]);
@@ -19,13 +22,15 @@ namespace BomberMan
             temp = new Tile[4];
             for (int i = 0; i < temp.Length; i++)
                 temp[i] = new Tile(i * 32, 0, 32, 32, Tile.TextureList["Walk_Side"]);
-            Walk_Side = new Animation(temp,5);
+            Walk_Side = new Animation(temp,7);
+
             for (int i = 0; i < temp.Length; i++)
                 temp[i] = new Tile(i * 32, 0, 32, 32, Tile.TextureList["Walk_Up"]);
-            Walk_Up = new Animation(temp, 5);
+            Walk_Up = new Animation(temp, 7);
+
             for (int i = 0; i < temp.Length; i++)
                 temp[i] = new Tile(i * 32, 0, 32, 32, Tile.TextureList["Walk_Down"]);
-            Walk_Down = new Animation(temp, 5);
+            Walk_Down = new Animation(temp, 7);
         }
         public Tile[] tiles;
         public int fpt;
@@ -36,7 +41,7 @@ namespace BomberMan
         public AnimPlayState pState;
         public Animation(Tile[] tileList,int FramesPerTile)
         {
-            this.tiles = tileList;
+            tiles = (Tile[])tileList.Clone();
             fpt=FramesPerTile;
             currentFrames = 0;
             completed = 0;
@@ -65,9 +70,9 @@ namespace BomberMan
         public void Draw(Rectangle rect,Color color)
         {
             if(pState!=AnimPlayState.Reverse)
-                tiles[currentFrames / fpt].Draw(rect, color);
+                tiles[currentFrames / fpt].Draw(rect, color,Flipped);
             if (pState == AnimPlayState.Reverse)
-                tiles[tiles.Length-1-(currentFrames / fpt)].Draw(rect, color);
+                tiles[tiles.Length-1-(currentFrames / fpt)].Draw(rect, color,Flipped);
         }
     }
 }
