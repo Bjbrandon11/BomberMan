@@ -49,7 +49,14 @@ namespace BomberMan
             Tile.LoadContent();
             LoadLevel();
             spawns = level.getSpawnBlocks();
-            players.Add(new Player(PlayerIndex.One, spawns[0].hitBox.Center));
+            for (int i = 0; i < 4; i++)
+            {
+                PlayerIndex at = (PlayerIndex)i;
+                if (GamePad.GetState(at).IsConnected)
+                {
+                    players.Add(new Player(at, spawns[i].hitBox.Center));
+                }
+            }
             Animation.LoadContent();
         }
 
@@ -71,7 +78,7 @@ namespace BomberMan
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || kb.IsKeyDown(Keys.Escape))
                 this.Exit();
-
+            level.Update();
             for (int i = EntityList.Count - 1; i >= 0; i--)
             {
                 EntityList[i].Update();

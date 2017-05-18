@@ -15,6 +15,7 @@ namespace BomberMan
         private Block[,] locations;
         private Dictionary<string, Texture2D> tileSheets;
         public Dictionary<int, Rectangle> TileSourceRecs;
+        public Dictionary<Block, Timer> Timers;
         Block[] spawns = new Block[4];
         public ContentManager Content
         {
@@ -43,7 +44,7 @@ namespace BomberMan
         public Layout(IServiceProvider _serviceProvider, string path)
         {
             content = new ContentManager(_serviceProvider, "Content");
-
+            Timers = new Dictionary<Block, Timer>();
             tileSheets = new Dictionary<string, Texture2D>();
             tileSheets.Add("Block_Invin", Content.Load<Texture2D>("Textures/Tiles/Block_Invin"));
             tileSheets.Add("break", Content.Load<Texture2D>("Textures/Tiles/break"));
@@ -132,7 +133,31 @@ namespace BomberMan
 
             }
         }
-
+        public void Update()
+        {
+            UpdateExplosions();
+        }
+        private void UpdateExplosions()
+        {
+            foreach (Block b in tiles)
+            {
+                if (b.currentState == BlockState.Explosion)
+                    if (!Timers.ContainsKey(b))
+                    {
+                        Timers.Add(b, new Timer(.6));
+                        Timers[b].Play();
+                    }
+                    else
+                    {
+                        Timers[b].Update();
+                        if (Timers[b].isDone())
+                        {
+                            b.newState(new Tile(0, 0, 32, 32, Tile.TextureList["EXP_END_2"]), BlockState.Passable);
+                            Timers.Remove(b);
+                        }
+                    }
+            }
+        }
         //private Tile LoadVarietyTile(string _tileSheetName, int _colorRow, int _variationCount)
         //{
         //    int index = random.Next(_variationCount);
