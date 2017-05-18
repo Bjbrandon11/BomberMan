@@ -11,6 +11,7 @@ namespace BomberMan
         protected int count;//this is the number of frames that have gone by since it started
         protected int frequency;//this is how often the action occurs
         protected bool isRunning;
+        public bool Running { get { return isRunning; } }
         const float FRAMES_PER_SECOND = 60.0f;
         public Timer(int frames)
         {
@@ -43,6 +44,10 @@ namespace BomberMan
         public void Pause()
         {
             isRunning = false;
+        }
+        public double getPercent()
+        {
+            return (double)count / (double)frequency;// * 100.0d;
         }
     }
 }
