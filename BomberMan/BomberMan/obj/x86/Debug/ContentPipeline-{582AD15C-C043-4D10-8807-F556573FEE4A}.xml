@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb</Output>
-      <Time>2017-05-08T10:10:33.9557843-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb</Output>
+      <Time>2017-05-09T21:24:57.3544972-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Bombs\Explosion-sheet.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb</Output>
-      <Time>2017-05-08T10:10:33.9517843-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb</Output>
+      <Time>2017-05-09T21:24:57.3519946-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Block_Invin.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb</Output>
-      <Time>2017-05-08T10:10:33.9577843-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb</Output>
+      <Time>2017-05-09T21:24:57.3559974-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\break.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb</Output>
-      <Time>2017-05-08T10:10:33.9597843-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb</Output>
+      <Time>2017-05-09T21:24:57.3569997-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Lives\lives.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb</Output>
-      <Time>2017-05-08T10:10:33.9537843-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb</Output>
+      <Time>2017-05-09T21:24:57.3534956-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp1.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp1.xnb</Output>
-      <Time>2017-05-16T08:33:32.1646938-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp1.xnb</Output>
+      <Time>2017-05-16T22:37:33.3959764-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp2.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp2.xnb</Output>
-      <Time>2017-05-16T08:33:32.2016938-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp2.xnb</Output>
+      <Time>2017-05-16T22:37:33.3969762-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp3.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp3.xnb</Output>
-      <Time>2017-05-16T08:33:32.2076938-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp3.xnb</Output>
+      <Time>2017-05-16T22:37:33.3979768-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp4.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp4.xnb</Output>
-      <Time>2017-05-16T08:33:32.2126938-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp4.xnb</Output>
+      <Time>2017-05-16T22:37:33.3989784-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp5.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp5.xnb</Output>
-      <Time>2017-05-16T08:33:32.2176938-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp5.xnb</Output>
+      <Time>2017-05-16T22:37:33.3999793-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp6.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp6.xnb</Output>
-      <Time>2017-05-16T08:33:32.2446938-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp6.xnb</Output>
+      <Time>2017-05-16T22:37:33.40198-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp7.png</Source>
@@ -106,8 +106,44 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp7.xnb</Output>
-      <Time>2017-05-16T08:33:32.2496938-05:00</Time>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp7.xnb</Output>
+      <Time>2017-05-16T22:37:33.4029805-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Sprites\Man\Walk_Down.png</Source>
+      <Name>Textures\Sprites\Man\Walk_Down</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Down.xnb</Output>
+      <Time>2017-05-17T21:59:03.5018588-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Sprites\Man\Walk_Side.png</Source>
+      <Name>Textures\Sprites\Man\Walk_Side</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Side.xnb</Output>
+      <Time>2017-05-17T21:59:03.524877-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Sprites\Man\Walk_Up.png</Source>
+      <Name>Textures\Sprites\Man\Walk_Up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Up.xnb</Output>
+      <Time>2017-05-17T21:59:03.5408881-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Tiles\Block_Break.png</Source>
+      <Name>Textures\Tiles\Block_Break</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break.xnb</Output>
+      <Time>2017-05-17T21:59:03.5478921-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -116,10 +152,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberManContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberManContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -147,8 +183,8 @@
         <Value>2011-09-01T16:22:30-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2016-11-04T08:32:43.3875549-05:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-10-20T20:02:46.2395525-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
