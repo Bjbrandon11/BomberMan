@@ -100,6 +100,10 @@ namespace BomberMan
             {
                 Player p = players[i];
                 p.Update();
+                if(p.invul.isDone())
+                    GamePad.SetVibration((PlayerIndex)i, 0.0f, 0.0f);
+                else if (p.invul.Running)
+                    GamePad.SetVibration(((PlayerIndex)i), 0.25f, 0.25f);
                 if (p.CheckIfAllDead())
                 {
                     players.Remove(p);
