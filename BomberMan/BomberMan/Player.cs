@@ -20,7 +20,8 @@ namespace BomberMan
         KeyboardState oldKb;//what the state of the keyboard was last frame
         const float deadZoneAmount = 0.15f;
 
-        Tile text; //will become animation later
+        Animation anim; //will become animation later
+        List<Animation> pAnims;
         bool bombPlaced;
         const float MAX_SPEED = 35.0f;
         readonly Color playerColor;
@@ -30,7 +31,11 @@ namespace BomberMan
             bombPlaced = false;
             playerColor = Color.White;
             usingKeyboard = true;
-            text = new Tile(0, 0, 32, 32, Tile.TextureList["Man"]);
+            pAnims = new List<Animation>();
+            pAnims.Add(Animation.Walk_Down);
+            pAnims.Add(Animation.Walk_Side);
+            pAnims.Add(Animation.Walk_Up);
+            anim = pAnims[0];
             hitBox = new Rectangle((int)(location.X-(16)*Game1.scaleFrom32),(int)(location.Y-(16)*Game1.scaleFrom32),(int)(Game1.scaleFrom32*32), (int)(Game1.scaleFrom32 * 32));
             oldGPS = GamePad.GetState(playerNum);
             oldKb = Keyboard.GetState();
@@ -77,6 +82,7 @@ namespace BomberMan
             GamePadState gps = GamePad.GetState(playerNum);
             KeyboardState kb = Keyboard.GetState();
             invul.Update();
+            anim.Update();
             //TODO: write update logic
             if(usingKeyboard)
             {
@@ -99,12 +105,34 @@ namespace BomberMan
                     placeBomb();
                 if (Math.Abs(gps.ThumbSticks.Left.X)>deadZoneAmount||Math.Abs(gps.ThumbSticks.Left.Y)>deadZoneAmount)
                 {
+                    double x = (gps.ThumbSticks.Left.X );
+                    double y = (gps.ThumbSticks.Left.Y );
+                    //move((int)(gps.ThumbSticks.Left.X * 2), 0);
+                    //move(0, (int)(gps.ThumbSticks.Left.Y * -2));
+                    move((int)x*2,(int)y*-2);
+                    anim.pState = Animation.AnimPlayState.Play;
+                        
+                    if (Math.Abs(x) >= Math.Abs(y))
+                    {
+                        if (x > 0 && (anim!= pAnims[1] || (anim== pAnims[1] && anim.Flipped)))
+                            anim = pAnims[1];
+                        else if (x < 0 && (anim!=pAnims[1] || (anim==pAnims[1]) && !anim.Flipped))
+                            anim = pAnims[1];
 
-                    move((int)(gps.ThumbSticks.Left.X * 2), 0);
-                    move(0, (int)(gps.ThumbSticks.Left.Y * -2));
+                    }
+                    else
+                    {
+                        if (y < 0.0 && anim!=pAnims[0])
+                            anim = pAnims[0];
+                        else if (y > 0.0 && anim!=pAnims[2])
+                            anim = pAnims[2];
+
+                    }
                 }
-                
-                                
+                else
+                    anim.PRestart();
+
+
             }
             if (IsHit() && invul.isDone())
             {
@@ -128,7 +156,7 @@ namespace BomberMan
                 {
                     futureRect = new Rectangle(futureRect.X + (x-(x-1)), hitBox.Y , hitBox.Width, hitBox.Height);
                 }
-                if (futureRect.X != hitBox.X)
+                if (futureRect.Y != hitBox.Y)
                 {
                     futureRect = new Rectangle(futureRect.X , hitBox.Y + (y - (y - 1)), hitBox.Width, hitBox.Height);
                 }
@@ -154,7 +182,7 @@ namespace BomberMan
         }
         public override void Draw(SpriteBatch spritebatch)
         {
-            text.Draw(hitBox,playerColor);
+            anim.Draw(hitBox,playerColor);
         }
 
     }

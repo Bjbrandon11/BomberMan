@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Down.xnb</Output>
-      <Time>2017-05-16T22:52:34.3052999-05:00</Time>
+      <Time>2017-05-17T21:59:03.5018588-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Man\Walk_Side.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Side.xnb</Output>
-      <Time>2017-05-16T22:52:34.3052999-05:00</Time>
+      <Time>2017-05-17T21:59:03.524877-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Man\Walk_Up.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Up.xnb</Output>
-      <Time>2017-05-16T22:52:34.3209241-05:00</Time>
+      <Time>2017-05-17T21:59:03.5408881-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Block_Break.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break.xnb</Output>
-      <Time>2017-05-16T22:52:47.9221198-05:00</Time>
+      <Time>2017-05-17T21:59:03.5478921-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

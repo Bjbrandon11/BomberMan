@@ -47,6 +47,7 @@ namespace BomberMan
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
             Tile.LoadContent();
+            Animation.LoadContent();
             LoadLevel();
             spawns = level.getSpawnBlocks();
             for (int i = 0; i < 4; i++)
@@ -61,7 +62,7 @@ namespace BomberMan
             {
                 players.Add(new Player(spawns[0].hitBox.Center));
             }
-            Animation.LoadContent();
+            
         }
 
         private void LoadLevel()
@@ -103,12 +104,13 @@ namespace BomberMan
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.LightGreen);
-            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
+            level.Draw(gameTime, spriteBatch);
             foreach (Player p in players)
                 p.Draw(spriteBatch);
             foreach (Bomb b in EntityList)
                 b.Draw(spriteBatch);
-            level.Draw(gameTime, spriteBatch);
+            
             spriteBatch.End();
             base.Draw(gameTime);
         }

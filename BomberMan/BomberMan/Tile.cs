@@ -12,7 +12,6 @@ namespace BomberMan
     public class Tile
     {
         public static Dictionary<String,Texture2D> TextureList;
-        public static Tile[] bombAnimation;
         public static void LoadContent()
         {
             TextureList = new Dictionary<String, Texture2D>();
@@ -31,9 +30,10 @@ namespace BomberMan
             TextureList.Add("EXP_CONNECT_1", Content.Load<Texture2D>(@"Textures/Tiles/Explosions/Exp2"));
             TextureList.Add("EXP_CONNECT_2", Content.Load<Texture2D>(@"Textures/Tiles/Explosions/Exp4"));
             TextureList.Add("EXP_CENTER", Content.Load<Texture2D>(@"Textures/Tiles/Explosions/Exp7"));
-            bombAnimation = new Tile[30];
-            for (int i = 0; i < bombAnimation.Length; i++)
-                bombAnimation[i] = new Tile(i * 16, 0, 16, 16, TextureList["Explosion-sheet"]);
+            TextureList.Add("Walk_Down",Content.Load<Texture2D>(@"Textures/Sprites/Man/Walk_Down"));
+            TextureList.Add("Walk_Side", Content.Load<Texture2D>(@"Textures/Sprites/Man/Walk_Side"));
+            TextureList.Add("Walk_Up", Content.Load<Texture2D>(@"Textures/Sprites/Man/Walk_Up"));
+            
         }
         public readonly Rectangle sourceRec;
         public readonly Texture2D texture;
@@ -42,6 +42,7 @@ namespace BomberMan
             sourceRec = new Rectangle(x, y, width, height);
             texture = text;
         }
+        public bool Equals(Tile other) { return texture.Equals(other.texture); }
         public void Draw(Rectangle rect){this.Draw(rect,Color.White);}
         public void Draw(Rectangle rect,Color color){GameHolder.spritebatch.Draw(texture, rect,sourceRec, color);}
     }
