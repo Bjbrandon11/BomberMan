@@ -23,6 +23,10 @@ namespace BomberMan
         private const int BackBuffeHeight = 720;
         public static Block[] spawns;
         List<Player> players;
+        Texture2D livestext;
+        //Rectangle livesrect;
+        int lives;
+        SpriteFont font;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -35,9 +39,10 @@ namespace BomberMan
 
         protected override void Initialize()
         {
+            //livesrect = new Rectangle(20, 650, 30, 30);
             EntityList = new List<Bomb>();
             players = new List<Player>();
-            
+            lives = 5;
             base.Initialize();
         }
 
@@ -46,6 +51,8 @@ namespace BomberMan
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
+            livestext = Content.Load<Texture2D>("Textures/Lives/url");
+            font = Content.Load<SpriteFont>("font");
             Tile.LoadContent();
             Animation.LoadContent();
             LoadLevel();
@@ -89,13 +96,22 @@ namespace BomberMan
                 EntityList[i].Update();
             }
             // TODO: Add your update logic here
-            foreach (Player p in players)
+            for (int i = 0; i < players.Count; i++)
             {
+                Player p = players[i];
                 p.Update();
+                if(p.invul.isDone())
+                    GamePad.SetVibration((PlayerIndex)i, 0.0f, 0.0f);
+                else if (p.invul.Running)
+                    GamePad.SetVibration(((PlayerIndex)i), 0.25f, 0.25f);
+                if (p.CheckIfAllDead())
+                {
+                    players.Remove(p);
+                    i--;
+                    
+                }
             }
             // TODO: Add your update logic here
-            foreach (Player p in players)
-                p.Update();
             foreach (Entity e in EntityList)
                 e.Update();
             base.Update(gameTime);
@@ -105,6 +121,48 @@ namespace BomberMan
         {
             GraphicsDevice.Clear(Color.LightGreen);
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
+
+            int y = 630;
+            for (int i = 0; i < players.Count; i+= 2)
+            {
+                int x = 100;
+                for (int j = 0; j < players[i].lives; j++)
+                {
+                    spriteBatch.Draw(livestext, new Rectangle(x, y, 20, 20), Color.White);
+                    x += 30;
+                }
+                y += 30;
+            }
+
+            y = 630;
+            for (int i = 1; i < players.Count; i += 2)
+            {
+                int x = 1100;
+                for (int j = 0; j < players[i].lives; j++)
+                {
+                    spriteBatch.Draw(livestext, new Rectangle(x, y, 20, 20), Color.White);
+                    x += 30;
+                }
+                y += 30;
+            }
+
+
+            string playername = "Player";
+            int vectory = 630;
+            for (int i = 0; i < players.Count; i+= 2)
+            {
+                spriteBatch.DrawString(font, ""  + playername + (i+1), new Vector2(0, vectory), Color.Red);
+                vectory += 30;
+            }
+
+            vectory = 630;
+            for (int i = 1; i < players.Count; i += 2)
+            {
+                spriteBatch.DrawString(font, "" + playername + (i + 1), new Vector2(1000, vectory), Color.Red);
+                vectory += 30;
+            }
+
+
             level.Draw(gameTime, spriteBatch);
             foreach (Player p in players)
                 p.Draw(spriteBatch);

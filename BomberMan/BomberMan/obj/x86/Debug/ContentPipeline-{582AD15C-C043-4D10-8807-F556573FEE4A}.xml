@@ -9,6 +9,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb</Output>
       <Time>2017-05-08T10:10:33.9557843-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb</Output>
+      <Time>2017-04-21T09:10:00.6345992-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\BomberMan.xnb</Output>
+      <Time>2017-04-28T09:02:02.2683227-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Bombs\Explosion-sheet.png</Source>
@@ -18,6 +22,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb</Output>
       <Time>2017-05-08T10:10:33.9517843-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb</Output>
+      <Time>2017-04-21T09:10:00.6325988-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Bombs\Explosion-sheet.xnb</Output>
+      <Time>2017-04-28T09:02:02.2526966-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Block_Invin.png</Source>
@@ -27,6 +35,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb</Output>
       <Time>2017-05-08T10:10:33.9577843-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb</Output>
+      <Time>2017-04-21T09:10:00.6365996-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb</Output>
+      <Time>2017-04-28T09:02:02.2839464-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\break.png</Source>
@@ -36,6 +48,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb</Output>
       <Time>2017-05-08T10:10:33.9597843-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb</Output>
+      <Time>2017-05-08T09:55:45.7167793-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\break.xnb</Output>
+      <Time>2017-05-08T09:50:14.0908136-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Lives\lives.png</Source>
@@ -45,6 +61,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb</Output>
       <Time>2017-05-08T10:10:33.9537843-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb</Output>
+      <Time>2017-05-08T09:55:45.7147791-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Lives\lives.xnb</Output>
+      <Time>2017-05-08T09:50:14.0751835-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp1.png</Source>
@@ -54,6 +74,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp1.xnb</Output>
       <Time>2017-05-16T08:33:32.1646938-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp1.xnb</Output>
+      <Time>2017-05-16T08:49:32.3737827-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp1.xnb</Output>
+      <Time>2017-05-12T09:10:30.5452403-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp2.png</Source>
@@ -63,6 +87,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp2.xnb</Output>
       <Time>2017-05-16T08:33:32.2016938-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp2.xnb</Output>
+      <Time>2017-05-16T08:49:32.3767839-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp2.xnb</Output>
+      <Time>2017-05-12T09:10:30.592118-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp3.png</Source>
@@ -72,6 +100,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp3.xnb</Output>
       <Time>2017-05-16T08:33:32.2076938-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp3.xnb</Output>
+      <Time>2017-05-16T08:49:32.3787847-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp3.xnb</Output>
+      <Time>2017-05-12T09:10:30.6233711-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp4.png</Source>
@@ -81,6 +113,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp4.xnb</Output>
       <Time>2017-05-16T08:33:32.2126938-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp4.xnb</Output>
+      <Time>2017-05-16T08:49:32.3797851-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp4.xnb</Output>
+      <Time>2017-05-12T09:10:30.6702505-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp5.png</Source>
@@ -90,6 +126,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp5.xnb</Output>
       <Time>2017-05-16T08:33:32.2176938-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp5.xnb</Output>
+      <Time>2017-05-16T08:49:32.3817859-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp5.xnb</Output>
+      <Time>2017-05-12T09:10:30.7171319-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp6.png</Source>
@@ -99,6 +139,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp6.xnb</Output>
       <Time>2017-05-16T08:33:32.2446938-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp6.xnb</Output>
+      <Time>2017-05-16T08:49:32.3837867-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp6.xnb</Output>
+      <Time>2017-05-12T09:10:30.764006-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Explosions\Exp7.png</Source>
@@ -108,6 +152,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp7.xnb</Output>
       <Time>2017-05-16T08:33:32.2496938-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp7.xnb</Output>
+      <Time>2017-05-16T08:49:32.3847871-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Explosions\Exp7.xnb</Output>
+      <Time>2017-05-12T09:10:30.7952611-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Man\Walk_Down.png</Source>
@@ -117,6 +165,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Down.xnb</Output>
       <Time>2017-05-18T08:39:34.223147-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Down.xnb</Output>
+      <Time>2017-05-18T09:01:51.4350296-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Down.xnb</Output>
+      <Time>2017-05-18T08:44:12.2713209-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Man\Walk_Side.png</Source>
@@ -126,6 +178,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Side.xnb</Output>
       <Time>2017-05-18T08:39:34.2261476-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Side.xnb</Output>
+      <Time>2017-05-18T09:01:51.4370296-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Side.xnb</Output>
+      <Time>2017-05-18T08:44:12.2869461-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Sprites\Man\Walk_Up.png</Source>
@@ -135,6 +191,10 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Up.xnb</Output>
       <Time>2017-05-18T08:39:34.2421508-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Up.xnb</Output>
+      <Time>2017-05-18T09:01:51.4390296-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Sprites\Man\Walk_Up.xnb</Output>
+      <Time>2017-05-18T08:44:12.3025734-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Block_Break.png</Source>
@@ -144,6 +204,28 @@
       <Options>None</Options>
       <Output>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break.xnb</Output>
       <Time>2017-05-18T08:39:34.2451514-05:00</Time>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break.xnb</Output>
+      <Time>2017-05-18T09:01:51.4410296-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Lives\url .jpg</Source>
+      <Name>Textures\Lives\url</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Lives\url.xnb</Output>
+      <Time>2017-05-18T09:22:26.8861539-05:00</Time>
+    </Item>
+    <Item>
+      <Source>font.spritefont</Source>
+      <Name>font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\font.xnb</Output>
+      <Time>2017-05-18T09:25:09.8691233-05:00</Time>
+      <Output>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break.xnb</Output>
+      <Time>2017-05-18T08:44:12.3025734-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -156,6 +238,14 @@
       <LoggerRootDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\</LoggerRootDirectory>
       <IntermediateDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\</IntermediateDirectory>
       <OutputDirectory>C:\Users\180553\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberManContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberManContent\</RootDirectory>
+      <LoggerRootDirectory>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\</LoggerRootDirectory>
+      <IntermediateDirectory>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -185,6 +275,9 @@
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
         <Value>2016-11-04T08:32:43.3875549-05:00</Value>
+        <Value>2016-11-04T08:35:31.1332035-05:00</Value>
+        <Value>2016-12-07T13:40:35.1816223-06:00</Value>
+>>>>>>> refs/remotes/origin/master
       </Assembly>
     </Assemblies>
   </Asset>

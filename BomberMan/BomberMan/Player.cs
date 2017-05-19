@@ -10,10 +10,11 @@ namespace BomberMan
 {
     class Player : Entity
     {
+        
         public int lives;
         const int INITIAL_LIVES = 5;
         bool usingKeyboard;
-        Timer invul;
+        public Timer invul;
         //readonly is a keyword that allows the variable to be assigned once then not changed
         readonly PlayerIndex playerNum;//the number of which controller the player has
         GamePadState oldGPS;//what the state of the game pad was last frame
@@ -175,7 +176,7 @@ namespace BomberMan
                 hitBox = futureRect;
 
         }
-        public bool CheckIfAllDead(Rectangle explodeRect)
+        public bool CheckIfAllDead()
         {
             return lives == 0;
         }

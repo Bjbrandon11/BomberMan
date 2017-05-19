@@ -14,4 +14,6 @@ Content\Textures\Sprites\Man\Walk_Down.xnb
 Content\Textures\Sprites\Man\Walk_Side.xnb
 Content\Textures\Sprites\Man\Walk_Up.xnb
 Content\Textures\Tiles\Block_Break.xnb
+Content\Textures\Lives\url.xnb
+Content\font.xnb
 Content\Level\Level01.txt
