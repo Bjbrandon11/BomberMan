@@ -30,10 +30,11 @@ namespace BomberMan
             TextureList.Add("EXP_CONNECT_1", Content.Load<Texture2D>(@"Textures/Tiles/Explosions/Exp2"));
             TextureList.Add("EXP_CONNECT_2", Content.Load<Texture2D>(@"Textures/Tiles/Explosions/Exp4"));
             TextureList.Add("EXP_CENTER", Content.Load<Texture2D>(@"Textures/Tiles/Explosions/Exp7"));
-            TextureList.Add("Walk_Down",Content.Load<Texture2D>(@"Textures/Sprites/Man/Walk_Down"));
+
+            TextureList.Add("Walk_Down", Content.Load<Texture2D>(@"Textures/Sprites/Man/Walk_Down"));
             TextureList.Add("Walk_Side", Content.Load<Texture2D>(@"Textures/Sprites/Man/Walk_Side"));
             TextureList.Add("Walk_Up", Content.Load<Texture2D>(@"Textures/Sprites/Man/Walk_Up"));
-            
+
         }
         public readonly Rectangle sourceRec;
         public readonly Texture2D texture;
@@ -43,7 +44,14 @@ namespace BomberMan
             texture = text;
         }
         public bool Equals(Tile other) { return texture.Equals(other.texture); }
-        public void Draw(Rectangle rect){this.Draw(rect,Color.White);}
-        public void Draw(Rectangle rect,Color color){GameHolder.spritebatch.Draw(texture, rect,sourceRec, color);}
+        public void Draw(Rectangle rect){this.Draw(rect,Color.White,false);}
+        public void Draw(Rectangle rect,Color color) { this.Draw(rect, color, false); }
+        public void Draw(Rectangle rect,Color color,bool Flipped)
+        {
+            if(!Flipped)
+                GameHolder.spritebatch.Draw(texture, rect,sourceRec, color);
+            else
+                GameHolder.spritebatch.Draw(texture, rect, sourceRec, color, 0, new Vector2(0, 0), SpriteEffects.FlipHorizontally, 0);
+        }
     }
 }
