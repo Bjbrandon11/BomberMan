@@ -21,16 +21,16 @@ namespace BomberMan
             Bomb = new Animation(temp, 3);
             temp = new Tile[4];
             for (int i = 0; i < temp.Length; i++)
-                temp[i] = new Tile(i * 32, 0, 32, 32, Tile.TextureList["Walk_Side"]);
-            Walk_Side = new Animation(temp,7);
+                temp[i] = new Tile(i * 32+6, 0, 20, 32, Tile.TextureList["Walk_Side"]);
+            Walk_Side = new Animation(temp,6);
 
             for (int i = 0; i < temp.Length; i++)
-                temp[i] = new Tile(i * 32, 0, 32, 32, Tile.TextureList["Walk_Up"]);
-            Walk_Up = new Animation(temp, 7);
+                temp[i] = new Tile(i * 32+6, 0, 20, 32, Tile.TextureList["Walk_Up"]);
+            Walk_Up = new Animation(temp, 6);
 
             for (int i = 0; i < temp.Length; i++)
-                temp[i] = new Tile(i * 32, 0, 32, 32, Tile.TextureList["Walk_Down"]);
-            Walk_Down = new Animation(temp, 7);
+                temp[i] = new Tile(i * 32+6, 0, 20, 32, Tile.TextureList["Walk_Down"]);
+            Walk_Down = new Animation(temp, 6);
         }
         public Tile[] tiles;
         public int fpt;

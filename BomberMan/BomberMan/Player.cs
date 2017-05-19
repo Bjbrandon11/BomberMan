@@ -24,8 +24,9 @@ namespace BomberMan
         PlayerAnimation cAnim;
         Animation anim;
         bool bombPlaced;
-        const float MAX_SPEED = 35.0f;
-        readonly Color playerColor;
+        double size;
+        double speed;
+        Color playerColor;
 
         public Player(Point location) : base( location)
         {
@@ -33,12 +34,14 @@ namespace BomberMan
             playerColor = Color.White;
             usingKeyboard = true;
             cAnim = PlayerAnimation.WalkRight;
+            size = .85;
             anim = Animation.Walk_Side;
-            hitBox = new Rectangle((int)(location.X-(16)*Game1.scaleFrom32),(int)(location.Y-(16)*Game1.scaleFrom32),(int)(Game1.scaleFrom32*32), (int)(Game1.scaleFrom32 * 32));
+            hitBox = new Rectangle((int)(location.X-(16)*Game1.scaleFrom32*size),(int)(location.Y-(16)*Game1.scaleFrom32 * size),(int)(Game1.scaleFrom32*20 * size), (int)(Game1.scaleFrom32 * 32 * size));
             oldGPS = GamePad.GetState(playerNum);
             oldKb = Keyboard.GetState();
             lives = INITIAL_LIVES;
             invul = new Timer(1.5);
+            speed = 3.5;
             invul.Play();
             
         }
@@ -87,13 +90,13 @@ namespace BomberMan
                 if (kb.IsKeyDown(Keys.Space) && oldKb.IsKeyUp(Keys.Space))
                     placeBomb();
                 if (kb.IsKeyDown(Keys.Left))
-                    move(-2,0);
+                    move(-speed,0);
                 if (kb.IsKeyDown(Keys.Right))
-                    move(2, 0);
+                    move(speed, 0);
                 if (kb.IsKeyDown(Keys.Up))
-                    move(0, -2);
+                    move(0, -speed);
                 if (kb.IsKeyDown(Keys.Down))
-                    move(0 , 2);
+                    move(0 , speed);
                 if (GameHolder.level.Intersects(hitBox))
                     Console.WriteLine("STUCK");
             }
@@ -105,8 +108,8 @@ namespace BomberMan
                 {
                     double x = (gps.ThumbSticks.Left.X );
                     double y = (gps.ThumbSticks.Left.Y );
-                    move((int)(gps.ThumbSticks.Left.X * 2), 0);
-                    move(0, (int)(gps.ThumbSticks.Left.Y * -2));
+                    move((int)(gps.ThumbSticks.Left.X * speed), 0);
+                    move(0, (int)(gps.ThumbSticks.Left.Y * -speed));
                     //move((int)x*2,(int)y*-2);
                     anim.pState = Animation.AnimPlayState.Play;
                         
@@ -150,31 +153,42 @@ namespace BomberMan
                 invul.Reset();
                 Console.WriteLine("ouch");
             }
+            if(!invul.isDone())
+            {
+                if (invul.getPercent() * 100 % 6 > 3)
+                    playerColor.A = 125;
+                else
+                    playerColor.A = 200;
+            }
+            else if(playerColor.A!=255)
+                playerColor.A = 255;
             //End of update logic
             oldGPS = gps;
             oldKb = kb;
         }
         public void move(int x,int y)
         {
-           
-            Rectangle futureRect = new Rectangle(hitBox.X+x, hitBox.Y+y, hitBox.Width, hitBox.Height);
-            while(futureRect.X!=hitBox.X && futureRect.Y!=hitBox.Y)
+            move((double)x,(double)y);
+        }
+        public void move(double x, double y)
+        {
+            Rectangle futureRect = new Rectangle((int)Math.Round(hitBox.X + x), (int)Math.Round(hitBox.Y + y), hitBox.Width, hitBox.Height);
+            while (futureRect.X != hitBox.X && futureRect.Y != hitBox.Y)
             {
                 if (!GameHolder.level.Intersects(futureRect))
                     break;
                 if (futureRect.X != hitBox.X)
                 {
-                    futureRect = new Rectangle(futureRect.X + (x-(x-1)), hitBox.Y , hitBox.Width, hitBox.Height);
+                    futureRect = new Rectangle((int)Math.Round(futureRect.X + (x - (x - 1))), hitBox.Y, hitBox.Width, hitBox.Height);
                 }
                 if (futureRect.Y != hitBox.Y)
                 {
-                    futureRect = new Rectangle(futureRect.X , hitBox.Y + (y - (y - 1)), hitBox.Width, hitBox.Height);
+                    futureRect = new Rectangle(futureRect.X, (int)Math.Round(hitBox.Y + (y - (y - 1))), hitBox.Width, hitBox.Height);
                 }
-                
+
             }
             if (!GameHolder.level.Intersects(futureRect))
                 hitBox = futureRect;
-
         }
         public bool CheckIfAllDead()
         {
