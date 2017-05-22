@@ -1,3 +1,4 @@
+Content\font.xnb
 Content\Textures\Sprites\Man\BomberMan.xnb
 Content\Textures\Sprites\Bombs\Explosion-sheet.xnb
 Content\Textures\Tiles\Block_Invin.xnb
@@ -14,4 +15,5 @@ Content\Textures\Sprites\Man\Walk_Down.xnb
 Content\Textures\Sprites\Man\Walk_Side.xnb
 Content\Textures\Sprites\Man\Walk_Up.xnb
 Content\Textures\Tiles\Block_Break.xnb
+Content\Textures\Lives\url.xnb
 Content\Level\Level01.txt
