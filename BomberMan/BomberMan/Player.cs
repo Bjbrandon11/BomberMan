@@ -12,7 +12,7 @@ namespace BomberMan
     {
         
         public int lives;
-        const int INITIAL_LIVES = 5;
+        const int INITIAL_LIVES = 7;
         bool usingKeyboard;
         public Timer invul;
         //readonly is a keyword that allows the variable to be assigned once then not changed
@@ -41,7 +41,7 @@ namespace BomberMan
             oldKb = Keyboard.GetState();
             lives = INITIAL_LIVES;
             invul = new Timer(1.5);
-            speed = 3.5;
+            speed = 3.8;
             invul.Play();
             
         }
