@@ -222,3 +222,5 @@ C:\Users\217665\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\font
 \\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break.xnb
 C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\font.xnb
 C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Lives\url.xnb
+\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\font.xnb
+\\Fisd-fs4\hs\LHS\123470\Documents\GitHub\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Lives\url.xnb
