@@ -74,7 +74,7 @@ namespace BomberMan
 
         private void LoadLevel()
         {
-            level = new Layout(Services, @"Content/Level/Level01.txt");
+            level = new Layout(Services, @"Content/Level/Level02.txt");
             GameHolder.level = level;
         }
 
