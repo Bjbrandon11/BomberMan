@@ -30,7 +30,7 @@ namespace BomberMan
             //isExplosionFinished = false;
             explode = time;
             base.hitBox = new Rectangle(p.X - SIZE / 2, p.Y - SIZE / 2, SIZE, SIZE);
-            anim = Animation.Bomb.Clone(4);
+            anim = Animation.Bomb.Clone(time.frequency/30);
         }
         public override void Update()
         {

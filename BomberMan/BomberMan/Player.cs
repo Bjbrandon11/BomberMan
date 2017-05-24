@@ -15,6 +15,7 @@ namespace BomberMan
         const int INITIAL_LIVES = 7;
         bool usingKeyboard;
         public Timer invul;
+        public double bSeconds;
         //readonly is a keyword that allows the variable to be assigned once then not changed
         readonly PlayerIndex playerNum;//the number of which controller the player has
         GamePadState oldGPS;//what the state of the game pad was last frame
@@ -24,6 +25,9 @@ namespace BomberMan
         PlayerAnimation cAnim;
         Animation anim;
         bool bombPlaced;
+        int maxBombs;
+        int currentBombs;
+        Timer bombTimer;
         double size;
         double speed;
         Color playerColor;
@@ -41,8 +45,13 @@ namespace BomberMan
             oldKb = Keyboard.GetState();
             lives = INITIAL_LIVES;
             invul = new Timer(1.5);
+            bSeconds = 2.75;
+            maxBombs = 2;
+            currentBombs = 1;
+            bombTimer = new Timer(bSeconds);
             speed = 3.8;
             invul.Play();
+            bombTimer.Play();
             
         }
         public Player(PlayerIndex number, Point location) : this(location)
@@ -73,9 +82,13 @@ namespace BomberMan
         {
             int bottom = this.hitBox.Bottom;
             int center = this.hitBox.Center.X;
-            bombPlaced = true;
-            //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
-            Game1.EntityList.Add(new Bomb(hitBox.Center, new Timer(.75), 2, playerColor));
+            if (currentBombs>0)
+            {
+                bombPlaced = true;
+                currentBombs--;
+                //this.gameBoard.receiveBomb(new Bomb(), bottom, center);
+                Game1.EntityList.Add(new Bomb(hitBox.Center, new Timer(bSeconds), 2, playerColor));
+            }
         }
 
         public override void Update()
@@ -83,6 +96,7 @@ namespace BomberMan
             GamePadState gps = GamePad.GetState(playerNum);
             KeyboardState kb = Keyboard.GetState();
             invul.Update();
+            bombTimer.Update();
             anim.Update();
             //TODO: write update logic
             if(usingKeyboard)
@@ -146,6 +160,11 @@ namespace BomberMan
                 else
                     anim.PRestart();
 
+            }
+            if(bombTimer.isDone() && currentBombs<maxBombs)
+            {
+                currentBombs++;
+                bombTimer.Reset();
             }
             if (IsHit() && invul.isDone())
             {
