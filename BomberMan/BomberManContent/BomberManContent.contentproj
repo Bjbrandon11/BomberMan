@@ -146,6 +146,8 @@
   <ItemGroup>
     <None Include="Level\Level03.txt">
       <Name>Level03</Name>
+    <None Include="Level\Level02.txt">
+      <Name>Level02</Name>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
