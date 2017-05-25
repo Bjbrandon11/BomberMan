@@ -28,6 +28,7 @@ namespace BomberMan
         //Rectangle livesrect;
         int lives;
         SpriteFont font;
+        Timer upgrade;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -44,6 +45,8 @@ namespace BomberMan
             EntityList = new List<Bomb>();
             players = new List<Player>();
             lives = 5;
+            upgrade = new Timer(20.0);
+            upgrade.Play();
             base.Initialize();
         }
 
@@ -70,7 +73,7 @@ namespace BomberMan
             {
                 players.Add(new Player(spawns[0].hitBox.Center));
             }
-            
+            players.Add(new Player(spawns[3].hitBox.Center));
         }
 
         private void LoadLevel()
@@ -94,11 +97,26 @@ namespace BomberMan
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || kb.IsKeyDown(Keys.Escape))
                 this.Exit();
             level.Update();
+            upgrade.Update();
             for (int i = EntityList.Count - 1; i >= 0; i--)
             {
                 EntityList[i].Update();
             }
             // TODO: Add your update logic here
+            if(upgrade.isDone())
+            {
+                int rand = new Random().Next(4);
+                foreach (Player p in players)
+                    switch(rand)
+                    {
+                        case 0: p.bSeconds -= .15;break;
+                        case 1: p.speed += .1;break;
+                        case 2: p.range++; break;
+                        case 3: p.maxBombs++; break;
+                    }
+                upgrade.Reset();
+                  
+            }
             for (int i = 0; i < players.Count; i++)
             {
                 Player p = players[i];
@@ -110,6 +128,7 @@ namespace BomberMan
                 if (p.CheckIfAllDead())
                 {
                     players.Remove(p);
+                    GamePad.SetVibration((PlayerIndex)i, 0.0f, 0.0f);
                     i--;
                     
                 }
@@ -122,7 +141,7 @@ namespace BomberMan
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.LightGreen);
+            GraphicsDevice.Clear(Color.Gray);
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
 
             int y = 630;

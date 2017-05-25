@@ -264,3 +264,5 @@ C:\Users\123470\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xn
 C:\Users\123470\Desktop\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
 C:\Users\123470\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\BomberMan.csprojResolveAssemblyReference.cache
 C:\Users\123470\Desktop\BomberMan\BomberMan\BomberMan\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Level\Level03.txt
+C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Level\Level02.txt
