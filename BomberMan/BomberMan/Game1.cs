@@ -24,6 +24,7 @@ namespace BomberMan
         public static Block[] spawns;
         List<Player> players;
         Texture2D livestext;
+        string[] LevelNames = { "Content/Level/Level01.txt", "Content/Level/Level02.txt", "Content/Level/Level03.txt" };
         //Rectangle livesrect;
         int lives;
         SpriteFont font;
@@ -74,7 +75,9 @@ namespace BomberMan
 
         private void LoadLevel()
         {
-            level = new Layout(Services, @"Content/Level/Level02.txt");
+            Random rng = new Random();
+            int levelNum = rng.Next(3);
+            level = new Layout(Services, @""+LevelNames[levelNum]);
             GameHolder.level = level;
         }
 
