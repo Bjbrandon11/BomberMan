@@ -76,8 +76,8 @@ namespace BomberMan
         private void LoadLevel()
         {
             Random rng = new Random();
-            int levelNum = rng.Next(3);
-            level = new Layout(Services, @""+LevelNames[levelNum]);
+            int levelNum = rng.Next();
+            level = new Layout(Services, @""+LevelNames[levelNum%3]);
             GameHolder.level = level;
         }
 
