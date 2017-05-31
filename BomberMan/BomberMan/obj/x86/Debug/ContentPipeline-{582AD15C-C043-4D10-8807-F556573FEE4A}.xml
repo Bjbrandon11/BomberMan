@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb</Output>
-      <Time>2017-05-09T21:24:57.3559974-05:00</Time>
+      <Time>2017-05-30T22:15:08.4007844-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\break.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break.xnb</Output>
-      <Time>2017-05-18T21:38:54.8089881-05:00</Time>
+      <Time>2017-05-30T22:15:08.3759042-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Lives\url .jpg</Source>
@@ -162,6 +162,33 @@
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Lives\url.xnb</Output>
       <Time>2017-05-18T21:40:09.5030742-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Tiles\Block_Invin_OLD.png</Source>
+      <Name>Textures\Tiles\Block_Invin_OLD</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin_OLD.xnb</Output>
+      <Time>2017-05-09T21:24:57.3559974-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Tiles\Block_Break_OLD.png</Source>
+      <Name>Textures\Tiles\Block_Break_OLD</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break_OLD.xnb</Output>
+      <Time>2017-05-18T21:38:54.8089881-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\Lives\Heart.png</Source>
+      <Name>Textures\Lives\Heart</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Lives\Heart.xnb</Output>
+      <Time>2017-05-30T22:38:51.9969568-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

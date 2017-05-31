@@ -55,7 +55,7 @@ namespace BomberMan
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
-            livestext = Content.Load<Texture2D>("Textures/Lives/url");
+            livestext = Content.Load<Texture2D>("Textures/Lives/Heart");
             font = Content.Load<SpriteFont>("font");
             Tile.LoadContent();
             Animation.LoadContent();
@@ -141,7 +141,7 @@ namespace BomberMan
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Gray);
+            GraphicsDevice.Clear(new Color(60,60,60));
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
 
             int y = 630;
