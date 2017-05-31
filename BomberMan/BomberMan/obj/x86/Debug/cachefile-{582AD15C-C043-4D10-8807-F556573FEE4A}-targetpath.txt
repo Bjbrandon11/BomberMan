@@ -19,6 +19,12 @@ Content\Textures\Lives\url.xnb
 Content\Textures\Tiles\Block_Invin_OLD.xnb
 Content\Textures\Tiles\Block_Break_OLD.xnb
 Content\Textures\Lives\Heart.xnb
+Content\Songs\Song1.xnb
+Content\Songs\Song1.wma
+Content\Songs\Song0.xnb
+Content\Songs\Song0.wma
+Content\Songs\Song2.xnb
+Content\Songs\Song2.wma
 Content\Level\Level01.txt
 Content\Level\Level03.txt
 Content\Level\Level02.txt
