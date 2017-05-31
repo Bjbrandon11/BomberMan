@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin.xnb</Output>
-      <Time>2017-05-30T22:15:08.4007844-05:00</Time>
+      <Time>2017-05-30T22:45:32.2576463-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\break.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break.xnb</Output>
-      <Time>2017-05-30T22:15:08.3759042-05:00</Time>
+      <Time>2017-05-30T22:45:32.2551441-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Lives\url .jpg</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Invin_OLD.xnb</Output>
-      <Time>2017-05-09T21:24:57.3559974-05:00</Time>
+      <Time>2017-05-30T22:45:32.2586468-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Tiles\Block_Break_OLD.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Tiles\Block_Break_OLD.xnb</Output>
-      <Time>2017-05-18T21:38:54.8089881-05:00</Time>
+      <Time>2017-05-30T22:45:32.256145-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Lives\Heart.png</Source>
@@ -188,7 +188,37 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Textures\Lives\Heart.xnb</Output>
-      <Time>2017-05-30T22:38:51.9969568-05:00</Time>
+      <Time>2017-05-30T22:45:32.2536431-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Songs\Song1.mp3</Source>
+      <Name>Songs\Song1</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Songs\Song1.xnb</Output>
+      <Extra>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Songs\Song1.wma</Extra>
+      <Time>2017-05-30T22:53:06.5041412-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Songs\Song0.mp3</Source>
+      <Name>Songs\Song0</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Songs\Song0.xnb</Output>
+      <Extra>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Songs\Song0.wma</Extra>
+      <Time>2017-05-30T22:53:36.4722258-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Songs\Song2.mp3</Source>
+      <Name>Songs\Song2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Songs\Song2.xnb</Output>
+      <Extra>C:\Users\BRosa\Desktop\c# Projects\BomberMan\BomberMan\BomberMan\bin\x86\Debug\Content\Songs\Song2.wma</Extra>
+      <Time>2017-05-30T22:53:36.5038906-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

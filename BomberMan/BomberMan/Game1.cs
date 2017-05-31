@@ -22,6 +22,7 @@ namespace BomberMan
         private const int BackBufferWidth = 1280;
         private const int BackBuffeHeight = 720;
         public static Block[] spawns;
+        Song song;
         List<Player> players;
         Texture2D livestext;
         string[] LevelNames = { "Content/Level/Level01.txt", "Content/Level/Level02.txt", "Content/Level/Level03.txt" };
@@ -57,6 +58,9 @@ namespace BomberMan
             GameHolder.game = this;
             livestext = Content.Load<Texture2D>("Textures/Lives/Heart");
             font = Content.Load<SpriteFont>("font");
+            song = Content.Load<Song>("Songs/Song"+new Random().Next(3));
+            MediaPlayer.Play(song);
+            MediaPlayer.Volume = .03f;
             Tile.LoadContent();
             Animation.LoadContent();
             LoadLevel();
