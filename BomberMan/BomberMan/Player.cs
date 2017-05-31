@@ -49,7 +49,7 @@ namespace BomberMan
             bSeconds = 2.75;
             maxBombs = 2;
             currentBombs = 1;
-            range = 1;
+            range = 2;
             bombTimer = new Timer[maxBombs];
             speed = 3.8;
             invul.Play();
