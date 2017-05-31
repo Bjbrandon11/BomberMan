@@ -55,7 +55,7 @@ namespace BomberMan
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameHolder.spritebatch = spriteBatch;
             GameHolder.game = this;
-            livestext = Content.Load<Texture2D>("Textures/Lives/url");
+            livestext = Content.Load<Texture2D>("Textures/Lives/Heart");
             font = Content.Load<SpriteFont>("font");
             Tile.LoadContent();
             Animation.LoadContent();
@@ -69,11 +69,11 @@ namespace BomberMan
                     players.Add(new Player(at, spawns[i].hitBox.Center));
                 }
             }
-            if(players.Count==0)
+            if(players.Count<2)
             {
-                players.Add(new Player(spawns[0].hitBox.Center));
+                players.Add(new Player(spawns[players.Count].hitBox.Center));
             }
-            players.Add(new Player(spawns[3].hitBox.Center));
+            //players.Add(new Player(spawns[3].hitBox.Center));
         }
 
         private void LoadLevel()
@@ -110,7 +110,7 @@ namespace BomberMan
                     switch(rand)
                     {
                         case 0: p.bSeconds -= .15;break;
-                        case 1: p.speed += .1;break;
+                        case 1: p.speed += .15;break;
                         case 2: p.range++; break;
                         case 3: p.maxBombs++; break;
                     }
@@ -141,7 +141,7 @@ namespace BomberMan
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Gray);
+            GraphicsDevice.Clear(new Color(60,60,60));
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, new RasterizerState { MultiSampleAntiAlias = true  });
 
             int y = 630;
