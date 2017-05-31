@@ -75,7 +75,7 @@ namespace BomberMan
             }
             if(players.Count<2)
             {
-                players.Add(new Player(spawns[players.Count].hitBox.Center));
+                //players.Add(new Player(spawns[players.Count].hitBox.Center));
             }
             //players.Add(new Player(spawns[3].hitBox.Center));
         }
